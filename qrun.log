@@ -1,0 +1,1334 @@
+QuestaSim-64 qrun 2024.1 Utility 2024.02 Feb  1 2024
+Start time: 11:03:36 on Feb 10,2025
+qrun sdram_top.sv -gui 
+-- Skipping 'vlog sdram_top.sv -work ./work...'
+-- Skipping vopt
+# Reading pref.tcl
+# //  Questa Sim-64
+# //  Version 2024.1 win64 Feb  1 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# vsim -lib ./work -wlf vsim.wlf -gui -statslog qrun.out/stats_log qrun_opt_1 -appendlog -l qrun.log -csession=incr -csessionid=3 
+# Start time: 11:03:49 on Feb 10,2025
+# Loading sv_std.std
+# Loading work.axi_interface(fast)
+# Loading work.sdr_intf(fast)
+# Loading mtiUvm.uvm_pkg(fast)
+# Loading work.sdram_top_sv_unit(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading work.top_tb(fast)
+# Loading C:/questasim64_2024.1/uvm-1.1d\win64\uvm_dpi.dll
+add wave -position insertpoint  \
+sim:/top_tb/svif/w_en \
+sim:/top_tb/svif/sys_RESET \
+sim:/top_tb/svif/sys_REF_REQ \
+sim:/top_tb/svif/sys_R_Wn \
+sim:/top_tb/svif/sys_INIT_DONE \
+sim:/top_tb/svif/sys_DLY_100US \
+sim:/top_tb/svif/sys_Data_Enable \
+sim:/top_tb/svif/sys_Data_Drive \
+sim:/top_tb/svif/sys_Data \
+sim:/top_tb/svif/sys_CYC_END \
+sim:/top_tb/svif/sys_CLK_int \
+sim:/top_tb/svif/sys_CLK_en \
+sim:/top_tb/svif/sys_CLK \
+sim:/top_tb/svif/sys_ADSn \
+sim:/top_tb/svif/sys_adrs_drive \
+sim:/top_tb/svif/sys_A \
+sim:/top_tb/svif/sdr_DQ \
+sim:/top_tb/svif/SDR_BA_WIDTH \
+sim:/top_tb/svif/SDR_A_WIDTH \
+sim:/top_tb/svif/RA_MSB \
+sim:/top_tb/svif/r_en \
+sim:/top_tb/svif/CA_LSB
+run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(277) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(278) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test control_test...
+# UVM_INFO scb.sv(38) @ 0: uvm_test_top.envr.scb [scoreboard class] -----------this is the top scoreboard-------------
+# UVM_INFO axi_m_driver.sv(19) @ 0: uvm_test_top.envr.agnt.drv [] master driver got the interface signals
+# UVM_INFO axi_m_sequencer.sv(11) @ 0: uvm_test_top.envr.agnt.sqr [] this is build_phase of sequencer
+# UVM_INFO sdram_cntrl_monitor.sv(16) @ 0: uvm_test_top.envr.s_agnt.mon [uvm_test_top.envr.s_agnt.mon] this is the monitor of sdram controller 
+# UVM_INFO sdram_cntrl_sequencer.sv(12) @ 0: uvm_test_top.envr.s_agnt.sdram_sqr [] this is build_phase of sequencer
+# UVM_INFO scb.sv(43) @ 0: uvm_test_top.envr.scb [uvm_test_top.envr.scb] -----------------SCOREBOARD Build Phase---------------------
+# UVM_INFO axi_s_sequencer.sv(11) @ 0: uvm_test_top.envr.sl_agnt.s_sqr [] this is build_phase of slave_sequencer
+# connection done
+# connection done in slave agent
+# UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
+# -----------------------------------------------------------------------
+# Name                       Type                             Size  Value
+# -----------------------------------------------------------------------
+# uvm_test_top               control_test                     -     @468 
+#   envr                     sdram_cntrl_env                  -     @483 
+#     agnt                   axi_m_agent                      -     @505 
+#       drv                  axi_m_driver                     -     @543 
+#         rsp_port           uvm_analysis_port                -     @558 
+#         seq_item_port      uvm_seq_item_pull_port           -     @550 
+#       mon                  axi_m_monitor                    -     @566 
+#         mon_ap             uvm_analysis_port                -     @683 
+#       sqr                  axi_m_sequencer                  -     @573 
+#         rsp_export         uvm_analysis_export              -     @580 
+#         seq_item_export    uvm_seq_item_pull_imp            -     @674 
+#         arbitration_queue  array                            0     -    
+#         lock_queue         array                            0     -    
+#         num_last_reqs      integral                         32    'd1  
+#         num_last_rsps      integral                         32    'd1  
+#     s_agnt                 sdram_cntrl_agent                -     @498 
+#       mon                  sdram_cntrl_monitor              -     @698 
+#         sd_port            uvm_analysis_port                -     @705 
+#       sdram_drv            sdram_cntrl_driver               -     @713 
+#         imp_txn            uvm_analysis_imp                 -     @720 
+#         stoa_read          uvm_analysis_port                -     @728 
+#       sdram_sqr            sdram_cntrl_sequencer            -     @736 
+#         rsp_export         uvm_analysis_export              -     @743 
+#         seq_item_export    uvm_seq_item_pull_imp            -     @837 
+#         arbitration_queue  array                            0     -    
+#         lock_queue         array                            0     -    
+#         num_last_reqs      integral                         32    'd1  
+#         num_last_rsps      integral                         32    'd1  
+#     scb                    scoreboard                       -     @519 
+#       analysis_imp_axi     uvm_analysis_imp_from_axi_mon    -     @526 
+#       analysis_imp_sdram   uvm_analysis_imp_from_sdram_mon  -     @534 
+#     sl_agnt                axi_s_agent                      -     @512 
+#       s_drv                axi4lite_slave_mem               -     @862 
+#         s_ap               uvm_analysis_imp                 -     @869 
+#       s_sqr                axi_s_sequencer                  -     @877 
+#         rsp_export         uvm_analysis_export              -     @884 
+#         seq_item_export    uvm_seq_item_pull_imp            -     @978 
+#         arbitration_queue  array                            0     -    
+#         lock_queue         array                            0     -    
+#         num_last_reqs      integral                         32    'd1  
+#         num_last_rsps      integral                         32    'd1  
+# -----------------------------------------------------------------------
+# 
+# UVM_INFO sdram_cntrl_driver.sv(75) @ 0: uvm_test_top.envr.s_agnt.sdram_drv [uvm_test_top.envr.s_agnt.sdram_drv] This is the run_phase of sdram_cntrl_driver
+# inside run_phase
+# inside loop1
+# inside loop2
+# inside loop3
+# UVM_INFO axi_m_driver.sv(29) @ 0: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] resetting signals of master 
+# UVM_INFO axi_m_driver.sv(32) @ 0: uvm_test_top.envr.agnt.drv [axi_m_driver] resetn reached
+# UVM_INFO sdram_cntrl_monitor.sv(57) @ 1: uvm_test_top.envr.s_agnt.mon [] ------------------------------------------------------------------------------------------------------------------
+# UVM_INFO sdram_cntrl_monitor.sv(58) @ 1: uvm_test_top.envr.s_agnt.mon [] Read captured in sdram_monitor : ADDR = x , Data = x 
+# entered loop
+# entered loop
+# UVM_INFO axi_m_driver.sv(32) @ 5: uvm_test_top.envr.agnt.drv [axi_m_driver] resetn reached
+# UVM_INFO axi_m_driver.sv(32) @ 15: uvm_test_top.envr.agnt.drv [axi_m_driver] resetn reached
+# UVM_INFO axi_m_driver.sv(32) @ 25: uvm_test_top.envr.agnt.drv [axi_m_driver] resetn reached
+# UVM_INFO axi_m_driver.sv(32) @ 35: uvm_test_top.envr.agnt.drv [axi_m_driver] resetn reached
+# UVM_INFO axi_m_driver.sv(32) @ 45: uvm_test_top.envr.agnt.drv [axi_m_driver] resetn reached
+# UVM_INFO axi_m_driver.sv(32) @ 55: uvm_test_top.envr.agnt.drv [axi_m_driver] resetn reached
+# UVM_INFO axi_m_driver.sv(32) @ 65: uvm_test_top.envr.agnt.drv [axi_m_driver] resetn reached
+# UVM_INFO axi_m_driver.sv(32) @ 75: uvm_test_top.envr.agnt.drv [axi_m_driver] resetn reached
+# UVM_INFO axi_m_driver.sv(32) @ 85: uvm_test_top.envr.agnt.drv [axi_m_driver] resetn reached
+# UVM_INFO axi_m_driver.sv(32) @ 95: uvm_test_top.envr.agnt.drv [axi_m_driver] resetn reached
+# UVM_INFO axi_m_driver.sv(32) @ 105: uvm_test_top.envr.agnt.drv [axi_m_driver] resetn reached
+#                  111ns : Coming Out Of Reset
+# UVM_INFO axi_m_driver.sv(32) @ 115: uvm_test_top.envr.agnt.drv [axi_m_driver] resetn reached
+# UVM_INFO axi_m_driver.sv(32) @ 125: uvm_test_top.envr.agnt.drv [axi_m_driver] resetn reached
+# UVM_INFO axi_m_driver.sv(32) @ 135: uvm_test_top.envr.agnt.drv [axi_m_driver] resetn reached
+# UVM_INFO axi_m_driver.sv(32) @ 145: uvm_test_top.envr.agnt.drv [axi_m_driver] resetn reached
+# UVM_INFO axi_m_driver.sv(32) @ 155: uvm_test_top.envr.agnt.drv [axi_m_driver] resetn reached
+# UVM_INFO axi_m_driver.sv(32) @ 165: uvm_test_top.envr.agnt.drv [axi_m_driver] resetn reached
+# UVM_INFO axi_m_driver.sv(32) @ 175: uvm_test_top.envr.agnt.drv [axi_m_driver] resetn reached
+# UVM_INFO axi_m_driver.sv(32) @ 185: uvm_test_top.envr.agnt.drv [axi_m_driver] resetn reached
+# UVM_INFO axi_m_driver.sv(32) @ 195: uvm_test_top.envr.agnt.drv [axi_m_driver] resetn reached
+# UVM_INFO axi_m_driver.sv(32) @ 205: uvm_test_top.envr.agnt.drv [axi_m_driver] resetn reached
+# UVM_INFO axi_m_driver.sv(32) @ 215: uvm_test_top.envr.agnt.drv [axi_m_driver] resetn reached
+# UVM_INFO axi_m_driver.sv(32) @ 225: uvm_test_top.envr.agnt.drv [axi_m_driver] resetn reached
+# UVM_INFO axi_m_driver.sv(32) @ 235: uvm_test_top.envr.agnt.drv [axi_m_driver] resetn reached
+# UVM_INFO axi_m_driver.sv(32) @ 245: uvm_test_top.envr.agnt.drv [axi_m_driver] resetn reached
+# UVM_INFO axi_m_driver.sv(32) @ 255: uvm_test_top.envr.agnt.drv [axi_m_driver] resetn reached
+# UVM_INFO axi_m_driver.sv(32) @ 265: uvm_test_top.envr.agnt.drv [axi_m_driver] resetn reached
+#                  271ns : Precharge Command
+# UVM_INFO axi_m_driver.sv(32) @ 275: uvm_test_top.envr.agnt.drv [axi_m_driver] resetn reached
+# UVM_INFO axi_m_driver.sv(32) @ 285: uvm_test_top.envr.agnt.drv [axi_m_driver] resetn reached
+#                  291ns : Auto Refresh Command
+# UVM_INFO axi_m_driver.sv(32) @ 295: uvm_test_top.envr.agnt.drv [axi_m_driver] resetn reached
+# UVM_INFO axi_m_driver.sv(53) @ 305: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] entering master driver run phase forever loop
+# UVM_INFO axi_m_driver.sv(81) @ 305: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] entering master write adress channel is 8
+# UVM_INFO axi_s_driver_1.sv(52) @ 315: uvm_test_top.envr.sl_agnt.s_drv [uvm_test_top.envr.sl_agnt.s_drv] inside write after init_done is 0 
+# UVM_INFO axi_s_driver_1.sv(52) @ 325: uvm_test_top.envr.sl_agnt.s_drv [uvm_test_top.envr.sl_agnt.s_drv] inside write after init_done is 0 
+# UVM_INFO axi_s_driver_1.sv(52) @ 335: uvm_test_top.envr.sl_agnt.s_drv [uvm_test_top.envr.sl_agnt.s_drv] inside write after init_done is 0 
+# UVM_INFO axi_s_driver_1.sv(52) @ 345: uvm_test_top.envr.sl_agnt.s_drv [uvm_test_top.envr.sl_agnt.s_drv] inside write after init_done is 0 
+# UVM_INFO axi_s_driver_1.sv(52) @ 355: uvm_test_top.envr.sl_agnt.s_drv [uvm_test_top.envr.sl_agnt.s_drv] inside write after init_done is 0 
+# UVM_INFO axi_s_driver_1.sv(52) @ 365: uvm_test_top.envr.sl_agnt.s_drv [uvm_test_top.envr.sl_agnt.s_drv] inside write after init_done is 0 
+#                  371ns : Auto Refresh Command
+# UVM_INFO axi_s_driver_1.sv(52) @ 375: uvm_test_top.envr.sl_agnt.s_drv [uvm_test_top.envr.sl_agnt.s_drv] inside write after init_done is 0 
+# UVM_INFO axi_s_driver_1.sv(52) @ 385: uvm_test_top.envr.sl_agnt.s_drv [uvm_test_top.envr.sl_agnt.s_drv] inside write after init_done is 0 
+# UVM_INFO axi_s_driver_1.sv(52) @ 395: uvm_test_top.envr.sl_agnt.s_drv [uvm_test_top.envr.sl_agnt.s_drv] inside write after init_done is 0 
+# UVM_INFO axi_s_driver_1.sv(52) @ 405: uvm_test_top.envr.sl_agnt.s_drv [uvm_test_top.envr.sl_agnt.s_drv] inside write after init_done is 0 
+# UVM_INFO axi_s_driver_1.sv(52) @ 415: uvm_test_top.envr.sl_agnt.s_drv [uvm_test_top.envr.sl_agnt.s_drv] inside write after init_done is 0 
+# UVM_INFO axi_s_driver_1.sv(52) @ 425: uvm_test_top.envr.sl_agnt.s_drv [uvm_test_top.envr.sl_agnt.s_drv] inside write after init_done is 0 
+# UVM_INFO axi_s_driver_1.sv(52) @ 435: uvm_test_top.envr.sl_agnt.s_drv [uvm_test_top.envr.sl_agnt.s_drv] inside write after init_done is 0 
+# UVM_INFO axi_s_driver_1.sv(52) @ 445: uvm_test_top.envr.sl_agnt.s_drv [uvm_test_top.envr.sl_agnt.s_drv] inside write after init_done is 0 
+#                  451ns : Load Mode Register 0x032
+#                  451ns : mode: CAS Latency=0x3, Burst Length=0x4
+# UVM_INFO axi_s_driver_1.sv(52) @ 455: uvm_test_top.envr.sl_agnt.s_drv [uvm_test_top.envr.sl_agnt.s_drv] inside write after init_done is 0 
+# UVM_INFO axi_s_driver_1.sv(52) @ 465: uvm_test_top.envr.sl_agnt.s_drv [uvm_test_top.envr.sl_agnt.s_drv] inside write after init_done is 0 
+# UVM_INFO axi_s_driver_1.sv(52) @ 475: uvm_test_top.envr.sl_agnt.s_drv [uvm_test_top.envr.sl_agnt.s_drv] inside write after init_done is 0 
+# UVM_INFO axi_s_driver_1.sv(52) @ 485: uvm_test_top.envr.sl_agnt.s_drv [uvm_test_top.envr.sl_agnt.s_drv] inside write after init_done is 0 
+# UVM_INFO axi_s_driver_1.sv(56) @ 495: uvm_test_top.envr.sl_agnt.s_drv [uvm_test_top.envr.sl_agnt.s_drv] inside write after init_done is 1 
+# UVM_INFO axi_m_driver.sv(140) @ 515: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] entering master write data channel
+# UVM_INFO axi_m_driver.sv(148) @ 515: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] waiting for wready : 0  to_ctr :  0
+# UVM_INFO axi_m_monitor.sv(41) @ 515: uvm_test_top.envr.agnt.mon [] -------------------------------------------------------------------------------------------
+# UVM_INFO axi_m_monitor.sv(42) @ 515: uvm_test_top.envr.agnt.mon [uvm_test_top.envr.agnt.mon] Write captured: Addr = 8, Data = abd5
+# UVM_INFO sdram_cntrl_driver.sv(40) @ 515: uvm_test_top.envr.s_agnt.sdram_drv [uvm_test_top.envr.s_agnt.sdram_drv] SDRAM_Driver_packet inside write implementation
+# UVM_INFO scb.sv(171) @ 515: uvm_test_top.envr.scb [scoreboard] ---------------- POPPED DATA ----------------
+# AXI Write Addr  : 8
+# AXI Read Addr   : 8
+# AXI Write Data  : abd5
+# AXI Read Data   : abd5
+# SDRAM Read Addr : 8
+# SDRAM Write Addr: 8
+# SDRAM Write Data: abd5
+# SDRAM Read Data : abd5
+# UVM_INFO scb.sv(180) @ 515: uvm_test_top.envr.scb [scoreboard] --------------------------------------------
+# UVM_INFO scb.sv(184) @ 515: uvm_test_top.envr.scb [scoreboard] Write Address Match!
+# UVM_INFO scb.sv(186) @ 515: uvm_test_top.envr.scb [scoreboard] Read Address Match!
+# UVM_INFO scb.sv(188) @ 515: uvm_test_top.envr.scb [scoreboard] Write Data Match!
+# UVM_INFO scb.sv(191) @ 515: uvm_test_top.envr.scb [scoreboard] ------------------------- DATA           1 MATCHED SUCCESSFULLY!!! ------------------------------
+# UVM_INFO sdram_cntrl_monitor.sv(40) @ 521: uvm_test_top.envr.s_agnt.mon [] -----------------------------------------------------------------------------------------------------------------
+# UVM_INFO sdram_cntrl_monitor.sv(41) @ 521: uvm_test_top.envr.s_agnt.mon [] write captured in sdram_monitor : ADDR = x , Data = x 
+# UVM_INFO axi_m_driver.sv(148) @ 525: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] waiting for wready : 0  to_ctr :  1
+# UVM_INFO axi_m_driver.sv(157) @ 535: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] data sent from master is : abd5
+# UVM_INFO axi_m_driver.sv(169) @ 545: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] entering master write response channel 
+# UVM_INFO axi_m_driver.sv(57) @ 565: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] exiting master driver run phase forever loop
+# UVM_INFO axi_m_driver.sv(53) @ 565: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] entering master driver run phase forever loop
+#                  571ns : Activate Command
+#                  571ns : Activate Command
+#                  591ns : Write Command
+#                  591ns :write: Bank=0x0, Row=0x000, Column=0x020, Data=0x5
+#                  611ns :write: Bank=0x0, Row=0x000, Column=0x021, Data=0xd
+#                  631ns :write: Bank=0x0, Row=0x000, Column=0x022, Data=0xb
+#                  651ns :write: Bank=0x0, Row=0x000, Column=0x023, Data=0xa
+# UVM_INFO sdram_cntrl_driver.sv(49) @ 701: uvm_test_top.envr.s_agnt.sdram_drv [uvm_test_top.envr.s_agnt.sdram_drv] Received transaction: ---------------------------------------------
+# Name          Type          Size  Value      
+# ---------------------------------------------
+# txn           axi_m_txn     -     @1093      
+#   aw_addr     integral      32    'h8        
+#   wdata       integral      16    'habd5     
+#   ar_addr     integral      32    'h0xxxxxxxx
+#   rdata       integral      16    'h0xxxx    
+#   type_trans  axi_txn_enum  32    WRITE_v    
+#   cycles      integral      32    'h0        
+#   sel         integral      1     'h0        
+# ---------------------------------------------
+# 
+# UVM_INFO sdram_cntrl_monitor.sv(57) @ 701: uvm_test_top.envr.s_agnt.mon [] ------------------------------------------------------------------------------------------------------------------
+# UVM_INFO sdram_cntrl_monitor.sv(58) @ 701: uvm_test_top.envr.s_agnt.mon [] Read captured in sdram_monitor : ADDR = x , Data = x 
+# UVM_INFO axi_m_driver.sv(112) @ 865: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] In master read adress channel
+# UVM_INFO sdram_cntrl_driver.sv(40) @ 865: uvm_test_top.envr.s_agnt.sdram_drv [uvm_test_top.envr.s_agnt.sdram_drv] SDRAM_Driver_packet inside write implementation
+# UVM_INFO sdram_cntrl_driver.sv(55) @ 865: uvm_test_top.envr.s_agnt.sdram_drv [uvm_test_top.envr.s_agnt.sdram_drv] inside read transaction of sdram _ controller driver 
+# siva arvalid recieved
+#  entered loop in driver 
+#                  931ns : Activate Command
+#                  931ns : Activate Command
+#                  951ns : Read Command
+#                  996ns : read: Bank=0x0, Row=0x000, Column=0x020, Data=0x5
+# temp value is 5
+#                 1016ns : read: Bank=0x0, Row=0x000, Column=0x021, Data=0xd
+# temp value is d
+#                 1036ns : read: Bank=0x0, Row=0x000, Column=0x022, Data=0xb
+# temp value is b
+#                 1056ns : read: Bank=0x0, Row=0x000, Column=0x023, Data=0xa
+# temp value is a
+# recieved data in axi_slave driver is abd5
+# read task inside sdram control driver : abd5 
+# UVM_INFO sdram_cntrl_driver.sv(62) @ 1061: uvm_test_top.envr.s_agnt.sdram_drv [uvm_test_top.envr.s_agnt.sdram_drv] Received transaction: ---------------------------------------------
+# Name          Type          Size  Value      
+# ---------------------------------------------
+# axi_m_txn     axi_m_txn     -     @1110      
+#   aw_addr     integral      32    'h0xxxxxxxx
+#   wdata       integral      16    'h0xxxx    
+#   ar_addr     integral      32    'h0xxxxxxxx
+#   rdata       integral      16    'habd5     
+#   type_trans  axi_txn_enum  32    READ_v     
+#   cycles      integral      32    'h0        
+#   sel         integral      1     'h0        
+# ---------------------------------------------
+# 
+# siva rvalid recieved
+# UVM_INFO axi_m_monitor.sv(65) @ 1061: uvm_test_top.envr.agnt.mon [] -------------------------------------------------------------------------------------------
+# UVM_INFO axi_m_monitor.sv(66) @ 1061: uvm_test_top.envr.agnt.mon [uvm_test_top.envr.agnt.mon] Read captured: Addr = 8, Data = abd5 (Match)
+# UVM_INFO axi_m_driver.sv(57) @ 1065: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] exiting master driver run phase forever loop
+# UVM_INFO axi_m_driver.sv(53) @ 1065: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] entering master driver run phase forever loop
+# exited loop
+# entered loop
+# UVM_INFO axi_m_driver.sv(81) @ 1565: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] entering master write adress channel is 10
+# UVM_INFO axi_s_driver_1.sv(56) @ 1575: uvm_test_top.envr.sl_agnt.s_drv [uvm_test_top.envr.sl_agnt.s_drv] inside write after init_done is 1 
+# UVM_INFO axi_m_driver.sv(140) @ 1595: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] entering master write data channel
+# UVM_INFO axi_m_driver.sv(148) @ 1595: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] waiting for wready : 0  to_ctr :  0
+# UVM_INFO axi_m_monitor.sv(41) @ 1595: uvm_test_top.envr.agnt.mon [] -------------------------------------------------------------------------------------------
+# UVM_INFO axi_m_monitor.sv(42) @ 1595: uvm_test_top.envr.agnt.mon [uvm_test_top.envr.agnt.mon] Write captured: Addr = 10, Data = abdd
+# UVM_INFO sdram_cntrl_driver.sv(40) @ 1595: uvm_test_top.envr.s_agnt.sdram_drv [uvm_test_top.envr.s_agnt.sdram_drv] SDRAM_Driver_packet inside write implementation
+# UVM_INFO scb.sv(171) @ 1595: uvm_test_top.envr.scb [scoreboard] ---------------- POPPED DATA ----------------
+# AXI Write Addr  : 10
+# AXI Read Addr   : 10
+# AXI Write Data  : abdd
+# AXI Read Data   : abdd
+# SDRAM Read Addr : 10
+# SDRAM Write Addr: 10
+# SDRAM Write Data: abdd
+# SDRAM Read Data : abdd
+# UVM_INFO scb.sv(180) @ 1595: uvm_test_top.envr.scb [scoreboard] --------------------------------------------
+# UVM_INFO scb.sv(184) @ 1595: uvm_test_top.envr.scb [scoreboard] Write Address Match!
+# UVM_INFO scb.sv(186) @ 1595: uvm_test_top.envr.scb [scoreboard] Read Address Match!
+# UVM_INFO scb.sv(188) @ 1595: uvm_test_top.envr.scb [scoreboard] Write Data Match!
+# UVM_INFO scb.sv(191) @ 1595: uvm_test_top.envr.scb [scoreboard] ------------------------- DATA           2 MATCHED SUCCESSFULLY!!! ------------------------------
+# UVM_INFO sdram_cntrl_monitor.sv(40) @ 1601: uvm_test_top.envr.s_agnt.mon [] -----------------------------------------------------------------------------------------------------------------
+# UVM_INFO sdram_cntrl_monitor.sv(41) @ 1601: uvm_test_top.envr.s_agnt.mon [] write captured in sdram_monitor : ADDR = 10 , Data = abd5 
+# UVM_INFO axi_m_driver.sv(148) @ 1605: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] waiting for wready : 0  to_ctr :  1
+# UVM_INFO axi_m_driver.sv(157) @ 1615: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] data sent from master is : abdd
+# UVM_INFO axi_m_driver.sv(169) @ 1625: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] entering master write response channel 
+# UVM_INFO axi_m_driver.sv(57) @ 1645: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] exiting master driver run phase forever loop
+# UVM_INFO axi_m_driver.sv(53) @ 1645: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] entering master driver run phase forever loop
+#                 1651ns : Activate Command
+#                 1651ns : Activate Command
+#                 1671ns : Write Command
+#                 1671ns :write: Bank=0x0, Row=0x000, Column=0x040, Data=0xd
+#                 1691ns :write: Bank=0x0, Row=0x000, Column=0x041, Data=0xd
+#                 1711ns :write: Bank=0x0, Row=0x000, Column=0x042, Data=0xb
+#                 1731ns :write: Bank=0x0, Row=0x000, Column=0x043, Data=0xa
+# UVM_INFO sdram_cntrl_driver.sv(49) @ 1781: uvm_test_top.envr.s_agnt.sdram_drv [uvm_test_top.envr.s_agnt.sdram_drv] Received transaction: ---------------------------------------------
+# Name          Type          Size  Value      
+# ---------------------------------------------
+# txn           axi_m_txn     -     @1118      
+#   aw_addr     integral      32    'h10       
+#   wdata       integral      16    'habdd     
+#   ar_addr     integral      32    'h0xxxxxxxx
+#   rdata       integral      16    'h0xxxx    
+#   type_trans  axi_txn_enum  32    WRITE_v    
+#   cycles      integral      32    'h0        
+#   sel         integral      1     'h0        
+# ---------------------------------------------
+# 
+# UVM_INFO sdram_cntrl_monitor.sv(57) @ 1781: uvm_test_top.envr.s_agnt.mon [] ------------------------------------------------------------------------------------------------------------------
+# UVM_INFO sdram_cntrl_monitor.sv(58) @ 1781: uvm_test_top.envr.s_agnt.mon [] Read captured in sdram_monitor : ADDR = 10 , Data = abdd 
+# UVM_INFO axi_m_driver.sv(112) @ 1945: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] In master read adress channel
+# UVM_INFO sdram_cntrl_driver.sv(40) @ 1945: uvm_test_top.envr.s_agnt.sdram_drv [uvm_test_top.envr.s_agnt.sdram_drv] SDRAM_Driver_packet inside write implementation
+# UVM_INFO sdram_cntrl_driver.sv(55) @ 1945: uvm_test_top.envr.s_agnt.sdram_drv [uvm_test_top.envr.s_agnt.sdram_drv] inside read transaction of sdram _ controller driver 
+# siva arvalid recieved
+#  entered loop in driver 
+#                 2011ns : Activate Command
+#                 2011ns : Activate Command
+#                 2031ns : Read Command
+#                 2076ns : read: Bank=0x0, Row=0x000, Column=0x040, Data=0xd
+# temp value is d
+#                 2096ns : read: Bank=0x0, Row=0x000, Column=0x041, Data=0xd
+# temp value is d
+#                 2116ns : read: Bank=0x0, Row=0x000, Column=0x042, Data=0xb
+# temp value is b
+#                 2136ns : read: Bank=0x0, Row=0x000, Column=0x043, Data=0xa
+# temp value is a
+# recieved data in axi_slave driver is abdd
+# read task inside sdram control driver : abdd 
+# UVM_INFO sdram_cntrl_driver.sv(62) @ 2141: uvm_test_top.envr.s_agnt.sdram_drv [uvm_test_top.envr.s_agnt.sdram_drv] Received transaction: ---------------------------------------------
+# Name          Type          Size  Value      
+# ---------------------------------------------
+# axi_m_txn     axi_m_txn     -     @1134      
+#   aw_addr     integral      32    'h0xxxxxxxx
+#   wdata       integral      16    'h0xxxx    
+#   ar_addr     integral      32    'h0xxxxxxxx
+#   rdata       integral      16    'habdd     
+#   type_trans  axi_txn_enum  32    READ_v     
+#   cycles      integral      32    'h0        
+#   sel         integral      1     'h0        
+# ---------------------------------------------
+# 
+# siva rvalid recieved
+# UVM_INFO axi_m_monitor.sv(65) @ 2141: uvm_test_top.envr.agnt.mon [] -------------------------------------------------------------------------------------------
+# UVM_INFO axi_m_monitor.sv(66) @ 2141: uvm_test_top.envr.agnt.mon [uvm_test_top.envr.agnt.mon] Read captured: Addr = 10, Data = abdd (Match)
+# UVM_INFO axi_m_driver.sv(57) @ 2145: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] exiting master driver run phase forever loop
+# UVM_INFO axi_m_driver.sv(53) @ 2145: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] entering master driver run phase forever loop
+# exited loop
+# entered loop
+# UVM_INFO axi_m_driver.sv(81) @ 2645: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] entering master write adress channel is 18
+# UVM_INFO axi_s_driver_1.sv(56) @ 2655: uvm_test_top.envr.sl_agnt.s_drv [uvm_test_top.envr.sl_agnt.s_drv] inside write after init_done is 1 
+# UVM_INFO axi_m_driver.sv(140) @ 2675: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] entering master write data channel
+# UVM_INFO axi_m_driver.sv(148) @ 2675: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] waiting for wready : 0  to_ctr :  0
+# UVM_INFO axi_m_monitor.sv(41) @ 2675: uvm_test_top.envr.agnt.mon [] -------------------------------------------------------------------------------------------
+# UVM_INFO axi_m_monitor.sv(42) @ 2675: uvm_test_top.envr.agnt.mon [uvm_test_top.envr.agnt.mon] Write captured: Addr = 18, Data = abe5
+# UVM_INFO sdram_cntrl_driver.sv(40) @ 2675: uvm_test_top.envr.s_agnt.sdram_drv [uvm_test_top.envr.s_agnt.sdram_drv] SDRAM_Driver_packet inside write implementation
+# UVM_INFO scb.sv(171) @ 2675: uvm_test_top.envr.scb [scoreboard] ---------------- POPPED DATA ----------------
+# AXI Write Addr  : 18
+# AXI Read Addr   : 18
+# AXI Write Data  : abe5
+# AXI Read Data   : abe5
+# SDRAM Read Addr : 18
+# SDRAM Write Addr: 18
+# SDRAM Write Data: abe5
+# SDRAM Read Data : abe5
+# UVM_INFO scb.sv(180) @ 2675: uvm_test_top.envr.scb [scoreboard] --------------------------------------------
+# UVM_INFO scb.sv(184) @ 2675: uvm_test_top.envr.scb [scoreboard] Write Address Match!
+# UVM_INFO scb.sv(186) @ 2675: uvm_test_top.envr.scb [scoreboard] Read Address Match!
+# UVM_INFO scb.sv(188) @ 2675: uvm_test_top.envr.scb [scoreboard] Write Data Match!
+# UVM_INFO scb.sv(191) @ 2675: uvm_test_top.envr.scb [scoreboard] ------------------------- DATA           3 MATCHED SUCCESSFULLY!!! ------------------------------
+# UVM_INFO sdram_cntrl_monitor.sv(40) @ 2681: uvm_test_top.envr.s_agnt.mon [] -----------------------------------------------------------------------------------------------------------------
+# UVM_INFO sdram_cntrl_monitor.sv(41) @ 2681: uvm_test_top.envr.s_agnt.mon [] write captured in sdram_monitor : ADDR = 18 , Data = abdd 
+# UVM_INFO axi_m_driver.sv(148) @ 2685: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] waiting for wready : 0  to_ctr :  1
+# UVM_INFO axi_m_driver.sv(157) @ 2695: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] data sent from master is : abe5
+# UVM_INFO axi_m_driver.sv(169) @ 2705: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] entering master write response channel 
+# UVM_INFO axi_m_driver.sv(57) @ 2725: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] exiting master driver run phase forever loop
+# UVM_INFO axi_m_driver.sv(53) @ 2725: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] entering master driver run phase forever loop
+#                 2731ns : Activate Command
+#                 2731ns : Activate Command
+#                 2751ns : Write Command
+#                 2751ns :write: Bank=0x0, Row=0x000, Column=0x060, Data=0x5
+#                 2771ns :write: Bank=0x0, Row=0x000, Column=0x061, Data=0xe
+#                 2791ns :write: Bank=0x0, Row=0x000, Column=0x062, Data=0xb
+#                 2811ns :write: Bank=0x0, Row=0x000, Column=0x063, Data=0xa
+# UVM_INFO sdram_cntrl_driver.sv(49) @ 2861: uvm_test_top.envr.s_agnt.sdram_drv [uvm_test_top.envr.s_agnt.sdram_drv] Received transaction: ---------------------------------------------
+# Name          Type          Size  Value      
+# ---------------------------------------------
+# txn           axi_m_txn     -     @1142      
+#   aw_addr     integral      32    'h18       
+#   wdata       integral      16    'habe5     
+#   ar_addr     integral      32    'h0xxxxxxxx
+#   rdata       integral      16    'h0xxxx    
+#   type_trans  axi_txn_enum  32    WRITE_v    
+#   cycles      integral      32    'h0        
+#   sel         integral      1     'h0        
+# ---------------------------------------------
+# 
+# UVM_INFO sdram_cntrl_monitor.sv(57) @ 2861: uvm_test_top.envr.s_agnt.mon [] ------------------------------------------------------------------------------------------------------------------
+# UVM_INFO sdram_cntrl_monitor.sv(58) @ 2861: uvm_test_top.envr.s_agnt.mon [] Read captured in sdram_monitor : ADDR = 18 , Data = abe5 
+# UVM_INFO axi_m_driver.sv(112) @ 3025: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] In master read adress channel
+# UVM_INFO sdram_cntrl_driver.sv(40) @ 3025: uvm_test_top.envr.s_agnt.sdram_drv [uvm_test_top.envr.s_agnt.sdram_drv] SDRAM_Driver_packet inside write implementation
+# UVM_INFO sdram_cntrl_driver.sv(55) @ 3025: uvm_test_top.envr.s_agnt.sdram_drv [uvm_test_top.envr.s_agnt.sdram_drv] inside read transaction of sdram _ controller driver 
+# siva arvalid recieved
+#  entered loop in driver 
+#                 3091ns : Activate Command
+#                 3091ns : Activate Command
+#                 3111ns : Read Command
+#                 3156ns : read: Bank=0x0, Row=0x000, Column=0x060, Data=0x5
+# temp value is 5
+#                 3176ns : read: Bank=0x0, Row=0x000, Column=0x061, Data=0xe
+# temp value is e
+#                 3196ns : read: Bank=0x0, Row=0x000, Column=0x062, Data=0xb
+# temp value is b
+#                 3216ns : read: Bank=0x0, Row=0x000, Column=0x063, Data=0xa
+# temp value is a
+# recieved data in axi_slave driver is abe5
+# read task inside sdram control driver : abe5 
+# UVM_INFO sdram_cntrl_driver.sv(62) @ 3221: uvm_test_top.envr.s_agnt.sdram_drv [uvm_test_top.envr.s_agnt.sdram_drv] Received transaction: ---------------------------------------------
+# Name          Type          Size  Value      
+# ---------------------------------------------
+# axi_m_txn     axi_m_txn     -     @1158      
+#   aw_addr     integral      32    'h0xxxxxxxx
+#   wdata       integral      16    'h0xxxx    
+#   ar_addr     integral      32    'h0xxxxxxxx
+#   rdata       integral      16    'habe5     
+#   type_trans  axi_txn_enum  32    READ_v     
+#   cycles      integral      32    'h0        
+#   sel         integral      1     'h0        
+# ---------------------------------------------
+# 
+# siva rvalid recieved
+# UVM_INFO axi_m_monitor.sv(65) @ 3221: uvm_test_top.envr.agnt.mon [] -------------------------------------------------------------------------------------------
+# UVM_INFO axi_m_monitor.sv(66) @ 3221: uvm_test_top.envr.agnt.mon [uvm_test_top.envr.agnt.mon] Read captured: Addr = 18, Data = abe5 (Match)
+# UVM_INFO axi_m_driver.sv(57) @ 3225: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] exiting master driver run phase forever loop
+# UVM_INFO axi_m_driver.sv(53) @ 3225: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] entering master driver run phase forever loop
+# exited loop
+# entered loop
+# UVM_INFO axi_m_driver.sv(81) @ 3725: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] entering master write adress channel is 20
+# UVM_INFO axi_s_driver_1.sv(56) @ 3735: uvm_test_top.envr.sl_agnt.s_drv [uvm_test_top.envr.sl_agnt.s_drv] inside write after init_done is 1 
+# UVM_INFO axi_m_driver.sv(140) @ 3755: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] entering master write data channel
+# UVM_INFO axi_m_driver.sv(148) @ 3755: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] waiting for wready : 0  to_ctr :  0
+# UVM_INFO axi_m_monitor.sv(41) @ 3755: uvm_test_top.envr.agnt.mon [] -------------------------------------------------------------------------------------------
+# UVM_INFO axi_m_monitor.sv(42) @ 3755: uvm_test_top.envr.agnt.mon [uvm_test_top.envr.agnt.mon] Write captured: Addr = 20, Data = abed
+# UVM_INFO sdram_cntrl_driver.sv(40) @ 3755: uvm_test_top.envr.s_agnt.sdram_drv [uvm_test_top.envr.s_agnt.sdram_drv] SDRAM_Driver_packet inside write implementation
+# UVM_INFO scb.sv(171) @ 3755: uvm_test_top.envr.scb [scoreboard] ---------------- POPPED DATA ----------------
+# AXI Write Addr  : 20
+# AXI Read Addr   : 20
+# AXI Write Data  : abed
+# AXI Read Data   : abed
+# SDRAM Read Addr : 20
+# SDRAM Write Addr: 20
+# SDRAM Write Data: abed
+# SDRAM Read Data : abed
+# UVM_INFO scb.sv(180) @ 3755: uvm_test_top.envr.scb [scoreboard] --------------------------------------------
+# UVM_INFO scb.sv(184) @ 3755: uvm_test_top.envr.scb [scoreboard] Write Address Match!
+# UVM_INFO scb.sv(186) @ 3755: uvm_test_top.envr.scb [scoreboard] Read Address Match!
+# UVM_INFO scb.sv(188) @ 3755: uvm_test_top.envr.scb [scoreboard] Write Data Match!
+# UVM_INFO scb.sv(191) @ 3755: uvm_test_top.envr.scb [scoreboard] ------------------------- DATA           4 MATCHED SUCCESSFULLY!!! ------------------------------
+# UVM_INFO sdram_cntrl_monitor.sv(40) @ 3761: uvm_test_top.envr.s_agnt.mon [] -----------------------------------------------------------------------------------------------------------------
+# UVM_INFO sdram_cntrl_monitor.sv(41) @ 3761: uvm_test_top.envr.s_agnt.mon [] write captured in sdram_monitor : ADDR = 20 , Data = abe5 
+# UVM_INFO axi_m_driver.sv(148) @ 3765: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] waiting for wready : 0  to_ctr :  1
+# UVM_INFO axi_m_driver.sv(157) @ 3775: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] data sent from master is : abed
+# UVM_INFO axi_m_driver.sv(169) @ 3785: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] entering master write response channel 
+# UVM_INFO axi_m_driver.sv(57) @ 3805: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] exiting master driver run phase forever loop
+# UVM_INFO axi_m_driver.sv(53) @ 3805: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] entering master driver run phase forever loop
+#                 3811ns : Activate Command
+#                 3811ns : Activate Command
+#                 3831ns : Write Command
+#                 3831ns :write: Bank=0x0, Row=0x000, Column=0x080, Data=0xd
+#                 3851ns :write: Bank=0x0, Row=0x000, Column=0x081, Data=0xe
+#                 3871ns :write: Bank=0x0, Row=0x000, Column=0x082, Data=0xb
+#                 3891ns :write: Bank=0x0, Row=0x000, Column=0x083, Data=0xa
+# UVM_INFO sdram_cntrl_driver.sv(49) @ 3941: uvm_test_top.envr.s_agnt.sdram_drv [uvm_test_top.envr.s_agnt.sdram_drv] Received transaction: ---------------------------------------------
+# Name          Type          Size  Value      
+# ---------------------------------------------
+# txn           axi_m_txn     -     @1166      
+#   aw_addr     integral      32    'h20       
+#   wdata       integral      16    'habed     
+#   ar_addr     integral      32    'h0xxxxxxxx
+#   rdata       integral      16    'h0xxxx    
+#   type_trans  axi_txn_enum  32    WRITE_v    
+#   cycles      integral      32    'h0        
+#   sel         integral      1     'h0        
+# ---------------------------------------------
+# 
+# UVM_INFO sdram_cntrl_monitor.sv(57) @ 3941: uvm_test_top.envr.s_agnt.mon [] ------------------------------------------------------------------------------------------------------------------
+# UVM_INFO sdram_cntrl_monitor.sv(58) @ 3941: uvm_test_top.envr.s_agnt.mon [] Read captured in sdram_monitor : ADDR = 20 , Data = abed 
+# UVM_INFO axi_m_driver.sv(112) @ 4105: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] In master read adress channel
+# UVM_INFO sdram_cntrl_driver.sv(40) @ 4105: uvm_test_top.envr.s_agnt.sdram_drv [uvm_test_top.envr.s_agnt.sdram_drv] SDRAM_Driver_packet inside write implementation
+# UVM_INFO sdram_cntrl_driver.sv(55) @ 4105: uvm_test_top.envr.s_agnt.sdram_drv [uvm_test_top.envr.s_agnt.sdram_drv] inside read transaction of sdram _ controller driver 
+# siva arvalid recieved
+#  entered loop in driver 
+#                 4171ns : Activate Command
+#                 4171ns : Activate Command
+#                 4191ns : Read Command
+#                 4236ns : read: Bank=0x0, Row=0x000, Column=0x080, Data=0xd
+# temp value is d
+#                 4256ns : read: Bank=0x0, Row=0x000, Column=0x081, Data=0xe
+# temp value is e
+#                 4276ns : read: Bank=0x0, Row=0x000, Column=0x082, Data=0xb
+# temp value is b
+#                 4296ns : read: Bank=0x0, Row=0x000, Column=0x083, Data=0xa
+# temp value is a
+# recieved data in axi_slave driver is abed
+# read task inside sdram control driver : abed 
+# UVM_INFO sdram_cntrl_driver.sv(62) @ 4301: uvm_test_top.envr.s_agnt.sdram_drv [uvm_test_top.envr.s_agnt.sdram_drv] Received transaction: ---------------------------------------------
+# Name          Type          Size  Value      
+# ---------------------------------------------
+# axi_m_txn     axi_m_txn     -     @1182      
+#   aw_addr     integral      32    'h0xxxxxxxx
+#   wdata       integral      16    'h0xxxx    
+#   ar_addr     integral      32    'h0xxxxxxxx
+#   rdata       integral      16    'habed     
+#   type_trans  axi_txn_enum  32    READ_v     
+#   cycles      integral      32    'h0        
+#   sel         integral      1     'h0        
+# ---------------------------------------------
+# 
+# siva rvalid recieved
+# UVM_INFO axi_m_monitor.sv(65) @ 4301: uvm_test_top.envr.agnt.mon [] -------------------------------------------------------------------------------------------
+# UVM_INFO axi_m_monitor.sv(66) @ 4301: uvm_test_top.envr.agnt.mon [uvm_test_top.envr.agnt.mon] Read captured: Addr = 20, Data = abed (Match)
+# UVM_INFO axi_m_driver.sv(57) @ 4305: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] exiting master driver run phase forever loop
+# UVM_INFO axi_m_driver.sv(53) @ 4305: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] entering master driver run phase forever loop
+# exited loop
+# entered loop
+# UVM_INFO axi_m_driver.sv(81) @ 4805: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] entering master write adress channel is 28
+# UVM_INFO axi_s_driver_1.sv(56) @ 4815: uvm_test_top.envr.sl_agnt.s_drv [uvm_test_top.envr.sl_agnt.s_drv] inside write after init_done is 1 
+# UVM_INFO axi_m_driver.sv(140) @ 4835: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] entering master write data channel
+# UVM_INFO axi_m_driver.sv(148) @ 4835: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] waiting for wready : 0  to_ctr :  0
+# UVM_INFO axi_m_monitor.sv(41) @ 4835: uvm_test_top.envr.agnt.mon [] -------------------------------------------------------------------------------------------
+# UVM_INFO axi_m_monitor.sv(42) @ 4835: uvm_test_top.envr.agnt.mon [uvm_test_top.envr.agnt.mon] Write captured: Addr = 28, Data = abf5
+# UVM_INFO sdram_cntrl_driver.sv(40) @ 4835: uvm_test_top.envr.s_agnt.sdram_drv [uvm_test_top.envr.s_agnt.sdram_drv] SDRAM_Driver_packet inside write implementation
+# UVM_INFO scb.sv(171) @ 4835: uvm_test_top.envr.scb [scoreboard] ---------------- POPPED DATA ----------------
+# AXI Write Addr  : 28
+# AXI Read Addr   : 28
+# AXI Write Data  : abf5
+# AXI Read Data   : abf5
+# SDRAM Read Addr : 28
+# SDRAM Write Addr: 28
+# SDRAM Write Data: abf5
+# SDRAM Read Data : abf5
+# UVM_INFO scb.sv(180) @ 4835: uvm_test_top.envr.scb [scoreboard] --------------------------------------------
+# UVM_INFO scb.sv(184) @ 4835: uvm_test_top.envr.scb [scoreboard] Write Address Match!
+# UVM_INFO scb.sv(186) @ 4835: uvm_test_top.envr.scb [scoreboard] Read Address Match!
+# UVM_INFO scb.sv(188) @ 4835: uvm_test_top.envr.scb [scoreboard] Write Data Match!
+# UVM_INFO scb.sv(191) @ 4835: uvm_test_top.envr.scb [scoreboard] ------------------------- DATA           5 MATCHED SUCCESSFULLY!!! ------------------------------
+# UVM_INFO sdram_cntrl_monitor.sv(40) @ 4841: uvm_test_top.envr.s_agnt.mon [] -----------------------------------------------------------------------------------------------------------------
+# UVM_INFO sdram_cntrl_monitor.sv(41) @ 4841: uvm_test_top.envr.s_agnt.mon [] write captured in sdram_monitor : ADDR = 28 , Data = abed 
+# UVM_INFO axi_m_driver.sv(148) @ 4845: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] waiting for wready : 0  to_ctr :  1
+# UVM_INFO axi_m_driver.sv(157) @ 4855: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] data sent from master is : abf5
+# UVM_INFO axi_m_driver.sv(169) @ 4865: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] entering master write response channel 
+# UVM_INFO axi_m_driver.sv(57) @ 4885: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] exiting master driver run phase forever loop
+# UVM_INFO axi_m_driver.sv(53) @ 4885: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] entering master driver run phase forever loop
+#                 4891ns : Activate Command
+#                 4891ns : Activate Command
+#                 4911ns : Write Command
+#                 4911ns :write: Bank=0x0, Row=0x000, Column=0x0a0, Data=0x5
+#                 4931ns :write: Bank=0x0, Row=0x000, Column=0x0a1, Data=0xf
+#                 4951ns :write: Bank=0x0, Row=0x000, Column=0x0a2, Data=0xb
+#                 4971ns :write: Bank=0x0, Row=0x000, Column=0x0a3, Data=0xa
+# UVM_INFO sdram_cntrl_driver.sv(49) @ 5021: uvm_test_top.envr.s_agnt.sdram_drv [uvm_test_top.envr.s_agnt.sdram_drv] Received transaction: ---------------------------------------------
+# Name          Type          Size  Value      
+# ---------------------------------------------
+# txn           axi_m_txn     -     @1190      
+#   aw_addr     integral      32    'h28       
+#   wdata       integral      16    'habf5     
+#   ar_addr     integral      32    'h0xxxxxxxx
+#   rdata       integral      16    'h0xxxx    
+#   type_trans  axi_txn_enum  32    WRITE_v    
+#   cycles      integral      32    'h0        
+#   sel         integral      1     'h0        
+# ---------------------------------------------
+# 
+# UVM_INFO sdram_cntrl_monitor.sv(57) @ 5021: uvm_test_top.envr.s_agnt.mon [] ------------------------------------------------------------------------------------------------------------------
+# UVM_INFO sdram_cntrl_monitor.sv(58) @ 5021: uvm_test_top.envr.s_agnt.mon [] Read captured in sdram_monitor : ADDR = 28 , Data = abf5 
+# UVM_INFO axi_m_driver.sv(112) @ 5185: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] In master read adress channel
+# UVM_INFO sdram_cntrl_driver.sv(40) @ 5185: uvm_test_top.envr.s_agnt.sdram_drv [uvm_test_top.envr.s_agnt.sdram_drv] SDRAM_Driver_packet inside write implementation
+# UVM_INFO sdram_cntrl_driver.sv(55) @ 5185: uvm_test_top.envr.s_agnt.sdram_drv [uvm_test_top.envr.s_agnt.sdram_drv] inside read transaction of sdram _ controller driver 
+# siva arvalid recieved
+#  entered loop in driver 
+#                 5251ns : Activate Command
+#                 5251ns : Activate Command
+#                 5271ns : Read Command
+#                 5316ns : read: Bank=0x0, Row=0x000, Column=0x0a0, Data=0x5
+# temp value is 5
+#                 5336ns : read: Bank=0x0, Row=0x000, Column=0x0a1, Data=0xf
+# temp value is f
+#                 5356ns : read: Bank=0x0, Row=0x000, Column=0x0a2, Data=0xb
+# temp value is b
+#                 5376ns : read: Bank=0x0, Row=0x000, Column=0x0a3, Data=0xa
+# temp value is a
+# recieved data in axi_slave driver is abf5
+# read task inside sdram control driver : abf5 
+# UVM_INFO sdram_cntrl_driver.sv(62) @ 5381: uvm_test_top.envr.s_agnt.sdram_drv [uvm_test_top.envr.s_agnt.sdram_drv] Received transaction: ---------------------------------------------
+# Name          Type          Size  Value      
+# ---------------------------------------------
+# axi_m_txn     axi_m_txn     -     @1206      
+#   aw_addr     integral      32    'h0xxxxxxxx
+#   wdata       integral      16    'h0xxxx    
+#   ar_addr     integral      32    'h0xxxxxxxx
+#   rdata       integral      16    'habf5     
+#   type_trans  axi_txn_enum  32    READ_v     
+#   cycles      integral      32    'h0        
+#   sel         integral      1     'h0        
+# ---------------------------------------------
+# 
+# siva rvalid recieved
+# UVM_INFO axi_m_monitor.sv(65) @ 5381: uvm_test_top.envr.agnt.mon [] -------------------------------------------------------------------------------------------
+# UVM_INFO axi_m_monitor.sv(66) @ 5381: uvm_test_top.envr.agnt.mon [uvm_test_top.envr.agnt.mon] Read captured: Addr = 28, Data = abf5 (Match)
+# UVM_INFO axi_m_driver.sv(57) @ 5385: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] exiting master driver run phase forever loop
+# UVM_INFO axi_m_driver.sv(53) @ 5385: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] entering master driver run phase forever loop
+# exited loop
+# ** Note: $finish    : sdram_top.sv(116)
+#    Time: 10300 ns  Iteration: 0  Instance: /top_tb
+# 1
+# Break at sdram_top.sv line 116
+add wave -position insertpoint  \
+sim:/top_tb/vif/wvalid \
+sim:/top_tb/vif/wstrb \
+sim:/top_tb/vif/wready \
+sim:/top_tb/vif/wdata \
+sim:/top_tb/vif/rvalid \
+sim:/top_tb/vif/rready \
+sim:/top_tb/vif/RESPONSE_WIDTH \
+sim:/top_tb/vif/resetn \
+sim:/top_tb/vif/rdata \
+sim:/top_tb/vif/DATA_WIDTH \
+sim:/top_tb/vif/clk \
+sim:/top_tb/vif/bvalid \
+sim:/top_tb/vif/bresp \
+sim:/top_tb/vif/bready \
+sim:/top_tb/vif/awvalid \
+sim:/top_tb/vif/awready \
+sim:/top_tb/vif/awprot \
+sim:/top_tb/vif/awaddr \
+sim:/top_tb/vif/arvalid \
+sim:/top_tb/vif/arready \
+sim:/top_tb/vif/arprot \
+sim:/top_tb/vif/araddr
+add wave -position insertpoint  \
+sim:/top_tb/vif/wvalid \
+sim:/top_tb/vif/wstrb \
+sim:/top_tb/vif/wready \
+sim:/top_tb/vif/wdata \
+sim:/top_tb/vif/rvalid \
+sim:/top_tb/vif/rready \
+sim:/top_tb/vif/RESPONSE_WIDTH \
+sim:/top_tb/vif/resetn \
+sim:/top_tb/vif/rdata \
+sim:/top_tb/vif/DATA_WIDTH \
+sim:/top_tb/vif/clk \
+sim:/top_tb/vif/bvalid \
+sim:/top_tb/vif/bresp \
+sim:/top_tb/vif/bready \
+sim:/top_tb/vif/awvalid \
+sim:/top_tb/vif/awready \
+sim:/top_tb/vif/awprot \
+sim:/top_tb/vif/awaddr \
+sim:/top_tb/vif/arvalid \
+sim:/top_tb/vif/arready \
+sim:/top_tb/vif/arprot \
+sim:/top_tb/vif/araddr
+run -all
+add wave -position insertpoint  \
+sim:/top_tb/vif/wvalid \
+sim:/top_tb/vif/wstrb \
+sim:/top_tb/vif/wready \
+sim:/top_tb/vif/wdata \
+sim:/top_tb/vif/rvalid \
+sim:/top_tb/vif/rready \
+sim:/top_tb/vif/RESPONSE_WIDTH \
+sim:/top_tb/vif/resetn \
+sim:/top_tb/vif/rdata \
+sim:/top_tb/vif/DATA_WIDTH \
+sim:/top_tb/vif/clk \
+sim:/top_tb/vif/bvalid \
+sim:/top_tb/vif/bresp \
+sim:/top_tb/vif/bready \
+sim:/top_tb/vif/awvalid \
+sim:/top_tb/vif/awready \
+sim:/top_tb/vif/awprot \
+sim:/top_tb/vif/awaddr \
+sim:/top_tb/vif/arvalid \
+sim:/top_tb/vif/arready \
+sim:/top_tb/vif/arprot \
+sim:/top_tb/vif/araddr
+add wave -position insertpoint  \
+sim:/top_tb/svif/w_en \
+sim:/top_tb/svif/sys_RESET \
+sim:/top_tb/svif/sys_REF_REQ \
+sim:/top_tb/svif/sys_R_Wn \
+sim:/top_tb/svif/sys_INIT_DONE \
+sim:/top_tb/svif/sys_DLY_100US \
+sim:/top_tb/svif/sys_Data_Enable \
+sim:/top_tb/svif/sys_Data_Drive \
+sim:/top_tb/svif/sys_Data \
+sim:/top_tb/svif/sys_CYC_END \
+sim:/top_tb/svif/sys_CLK_int \
+sim:/top_tb/svif/sys_CLK_en \
+sim:/top_tb/svif/sys_CLK \
+sim:/top_tb/svif/sys_ADSn \
+sim:/top_tb/svif/sys_adrs_drive \
+sim:/top_tb/svif/sys_A \
+sim:/top_tb/svif/sdr_DQ \
+sim:/top_tb/svif/SDR_BA_WIDTH \
+sim:/top_tb/svif/SDR_A_WIDTH \
+sim:/top_tb/svif/RA_MSB \
+sim:/top_tb/svif/r_en \
+sim:/top_tb/svif/CA_LSB
+run -all
+restart
+# Loading work.axi_interface(fast)
+# Loading work.sdr_intf(fast)
+# Loading mtiUvm.uvm_pkg(fast)
+# Loading work.sdram_top_sv_unit(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading work.top_tb(fast)
+# Loading C:/questasim64_2024.1/uvm-1.1d\win64\uvm_dpi.dll
+run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(277) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(278) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test control_test...
+# UVM_INFO scb.sv(38) @ 0: uvm_test_top.envr.scb [scoreboard class] -----------this is the top scoreboard-------------
+# UVM_INFO axi_m_driver.sv(19) @ 0: uvm_test_top.envr.agnt.drv [] master driver got the interface signals
+# UVM_INFO axi_m_sequencer.sv(11) @ 0: uvm_test_top.envr.agnt.sqr [] this is build_phase of sequencer
+# UVM_INFO sdram_cntrl_monitor.sv(16) @ 0: uvm_test_top.envr.s_agnt.mon [uvm_test_top.envr.s_agnt.mon] this is the monitor of sdram controller 
+# UVM_INFO sdram_cntrl_sequencer.sv(12) @ 0: uvm_test_top.envr.s_agnt.sdram_sqr [] this is build_phase of sequencer
+# UVM_INFO scb.sv(43) @ 0: uvm_test_top.envr.scb [uvm_test_top.envr.scb] -----------------SCOREBOARD Build Phase---------------------
+# UVM_INFO axi_s_sequencer.sv(11) @ 0: uvm_test_top.envr.sl_agnt.s_sqr [] this is build_phase of slave_sequencer
+# connection done
+# connection done in slave agent
+# UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
+# -----------------------------------------------------------------------
+# Name                       Type                             Size  Value
+# -----------------------------------------------------------------------
+# uvm_test_top               control_test                     -     @468 
+#   envr                     sdram_cntrl_env                  -     @483 
+#     agnt                   axi_m_agent                      -     @505 
+#       drv                  axi_m_driver                     -     @543 
+#         rsp_port           uvm_analysis_port                -     @558 
+#         seq_item_port      uvm_seq_item_pull_port           -     @550 
+#       mon                  axi_m_monitor                    -     @566 
+#         mon_ap             uvm_analysis_port                -     @683 
+#       sqr                  axi_m_sequencer                  -     @573 
+#         rsp_export         uvm_analysis_export              -     @580 
+#         seq_item_export    uvm_seq_item_pull_imp            -     @674 
+#         arbitration_queue  array                            0     -    
+#         lock_queue         array                            0     -    
+#         num_last_reqs      integral                         32    'd1  
+#         num_last_rsps      integral                         32    'd1  
+#     s_agnt                 sdram_cntrl_agent                -     @498 
+#       mon                  sdram_cntrl_monitor              -     @698 
+#         sd_port            uvm_analysis_port                -     @705 
+#       sdram_drv            sdram_cntrl_driver               -     @713 
+#         imp_txn            uvm_analysis_imp                 -     @720 
+#         stoa_read          uvm_analysis_port                -     @728 
+#       sdram_sqr            sdram_cntrl_sequencer            -     @736 
+#         rsp_export         uvm_analysis_export              -     @743 
+#         seq_item_export    uvm_seq_item_pull_imp            -     @837 
+#         arbitration_queue  array                            0     -    
+#         lock_queue         array                            0     -    
+#         num_last_reqs      integral                         32    'd1  
+#         num_last_rsps      integral                         32    'd1  
+#     scb                    scoreboard                       -     @519 
+#       analysis_imp_axi     uvm_analysis_imp_from_axi_mon    -     @526 
+#       analysis_imp_sdram   uvm_analysis_imp_from_sdram_mon  -     @534 
+#     sl_agnt                axi_s_agent                      -     @512 
+#       s_drv                axi4lite_slave_mem               -     @862 
+#         s_ap               uvm_analysis_imp                 -     @869 
+#       s_sqr                axi_s_sequencer                  -     @877 
+#         rsp_export         uvm_analysis_export              -     @884 
+#         seq_item_export    uvm_seq_item_pull_imp            -     @978 
+#         arbitration_queue  array                            0     -    
+#         lock_queue         array                            0     -    
+#         num_last_reqs      integral                         32    'd1  
+#         num_last_rsps      integral                         32    'd1  
+# -----------------------------------------------------------------------
+# 
+# UVM_INFO sdram_cntrl_driver.sv(75) @ 0: uvm_test_top.envr.s_agnt.sdram_drv [uvm_test_top.envr.s_agnt.sdram_drv] This is the run_phase of sdram_cntrl_driver
+# inside run_phase
+# inside loop1
+# inside loop2
+# inside loop3
+# UVM_INFO axi_m_driver.sv(29) @ 0: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] resetting signals of master 
+# UVM_INFO axi_m_driver.sv(32) @ 0: uvm_test_top.envr.agnt.drv [axi_m_driver] resetn reached
+# UVM_INFO sdram_cntrl_monitor.sv(57) @ 1: uvm_test_top.envr.s_agnt.mon [] ------------------------------------------------------------------------------------------------------------------
+# UVM_INFO sdram_cntrl_monitor.sv(58) @ 1: uvm_test_top.envr.s_agnt.mon [] Read captured in sdram_monitor : ADDR = x , Data = x 
+# entered loop
+# entered loop
+# UVM_INFO axi_m_driver.sv(32) @ 5: uvm_test_top.envr.agnt.drv [axi_m_driver] resetn reached
+# UVM_INFO axi_m_driver.sv(32) @ 15: uvm_test_top.envr.agnt.drv [axi_m_driver] resetn reached
+# UVM_INFO axi_m_driver.sv(32) @ 25: uvm_test_top.envr.agnt.drv [axi_m_driver] resetn reached
+# UVM_INFO axi_m_driver.sv(32) @ 35: uvm_test_top.envr.agnt.drv [axi_m_driver] resetn reached
+# UVM_INFO axi_m_driver.sv(32) @ 45: uvm_test_top.envr.agnt.drv [axi_m_driver] resetn reached
+# UVM_INFO axi_m_driver.sv(32) @ 55: uvm_test_top.envr.agnt.drv [axi_m_driver] resetn reached
+# UVM_INFO axi_m_driver.sv(32) @ 65: uvm_test_top.envr.agnt.drv [axi_m_driver] resetn reached
+# UVM_INFO axi_m_driver.sv(32) @ 75: uvm_test_top.envr.agnt.drv [axi_m_driver] resetn reached
+# UVM_INFO axi_m_driver.sv(32) @ 85: uvm_test_top.envr.agnt.drv [axi_m_driver] resetn reached
+# UVM_INFO axi_m_driver.sv(32) @ 95: uvm_test_top.envr.agnt.drv [axi_m_driver] resetn reached
+# UVM_INFO axi_m_driver.sv(32) @ 105: uvm_test_top.envr.agnt.drv [axi_m_driver] resetn reached
+#                  111ns : Coming Out Of Reset
+# UVM_INFO axi_m_driver.sv(32) @ 115: uvm_test_top.envr.agnt.drv [axi_m_driver] resetn reached
+# UVM_INFO axi_m_driver.sv(32) @ 125: uvm_test_top.envr.agnt.drv [axi_m_driver] resetn reached
+# UVM_INFO axi_m_driver.sv(32) @ 135: uvm_test_top.envr.agnt.drv [axi_m_driver] resetn reached
+# UVM_INFO axi_m_driver.sv(32) @ 145: uvm_test_top.envr.agnt.drv [axi_m_driver] resetn reached
+# UVM_INFO axi_m_driver.sv(32) @ 155: uvm_test_top.envr.agnt.drv [axi_m_driver] resetn reached
+# UVM_INFO axi_m_driver.sv(32) @ 165: uvm_test_top.envr.agnt.drv [axi_m_driver] resetn reached
+# UVM_INFO axi_m_driver.sv(32) @ 175: uvm_test_top.envr.agnt.drv [axi_m_driver] resetn reached
+# UVM_INFO axi_m_driver.sv(32) @ 185: uvm_test_top.envr.agnt.drv [axi_m_driver] resetn reached
+# UVM_INFO axi_m_driver.sv(32) @ 195: uvm_test_top.envr.agnt.drv [axi_m_driver] resetn reached
+# UVM_INFO axi_m_driver.sv(32) @ 205: uvm_test_top.envr.agnt.drv [axi_m_driver] resetn reached
+# UVM_INFO axi_m_driver.sv(32) @ 215: uvm_test_top.envr.agnt.drv [axi_m_driver] resetn reached
+# UVM_INFO axi_m_driver.sv(32) @ 225: uvm_test_top.envr.agnt.drv [axi_m_driver] resetn reached
+# UVM_INFO axi_m_driver.sv(32) @ 235: uvm_test_top.envr.agnt.drv [axi_m_driver] resetn reached
+# UVM_INFO axi_m_driver.sv(32) @ 245: uvm_test_top.envr.agnt.drv [axi_m_driver] resetn reached
+# UVM_INFO axi_m_driver.sv(32) @ 255: uvm_test_top.envr.agnt.drv [axi_m_driver] resetn reached
+# UVM_INFO axi_m_driver.sv(32) @ 265: uvm_test_top.envr.agnt.drv [axi_m_driver] resetn reached
+#                  271ns : Precharge Command
+# UVM_INFO axi_m_driver.sv(32) @ 275: uvm_test_top.envr.agnt.drv [axi_m_driver] resetn reached
+# UVM_INFO axi_m_driver.sv(32) @ 285: uvm_test_top.envr.agnt.drv [axi_m_driver] resetn reached
+#                  291ns : Auto Refresh Command
+# UVM_INFO axi_m_driver.sv(32) @ 295: uvm_test_top.envr.agnt.drv [axi_m_driver] resetn reached
+# UVM_INFO axi_m_driver.sv(53) @ 305: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] entering master driver run phase forever loop
+# UVM_INFO axi_m_driver.sv(81) @ 305: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] entering master write adress channel is 8
+# UVM_INFO axi_s_driver_1.sv(52) @ 315: uvm_test_top.envr.sl_agnt.s_drv [uvm_test_top.envr.sl_agnt.s_drv] inside write after init_done is 0 
+# UVM_INFO axi_s_driver_1.sv(52) @ 325: uvm_test_top.envr.sl_agnt.s_drv [uvm_test_top.envr.sl_agnt.s_drv] inside write after init_done is 0 
+# UVM_INFO axi_s_driver_1.sv(52) @ 335: uvm_test_top.envr.sl_agnt.s_drv [uvm_test_top.envr.sl_agnt.s_drv] inside write after init_done is 0 
+# UVM_INFO axi_s_driver_1.sv(52) @ 345: uvm_test_top.envr.sl_agnt.s_drv [uvm_test_top.envr.sl_agnt.s_drv] inside write after init_done is 0 
+# UVM_INFO axi_s_driver_1.sv(52) @ 355: uvm_test_top.envr.sl_agnt.s_drv [uvm_test_top.envr.sl_agnt.s_drv] inside write after init_done is 0 
+# UVM_INFO axi_s_driver_1.sv(52) @ 365: uvm_test_top.envr.sl_agnt.s_drv [uvm_test_top.envr.sl_agnt.s_drv] inside write after init_done is 0 
+#                  371ns : Auto Refresh Command
+# UVM_INFO axi_s_driver_1.sv(52) @ 375: uvm_test_top.envr.sl_agnt.s_drv [uvm_test_top.envr.sl_agnt.s_drv] inside write after init_done is 0 
+# UVM_INFO axi_s_driver_1.sv(52) @ 385: uvm_test_top.envr.sl_agnt.s_drv [uvm_test_top.envr.sl_agnt.s_drv] inside write after init_done is 0 
+# UVM_INFO axi_s_driver_1.sv(52) @ 395: uvm_test_top.envr.sl_agnt.s_drv [uvm_test_top.envr.sl_agnt.s_drv] inside write after init_done is 0 
+# UVM_INFO axi_s_driver_1.sv(52) @ 405: uvm_test_top.envr.sl_agnt.s_drv [uvm_test_top.envr.sl_agnt.s_drv] inside write after init_done is 0 
+# UVM_INFO axi_s_driver_1.sv(52) @ 415: uvm_test_top.envr.sl_agnt.s_drv [uvm_test_top.envr.sl_agnt.s_drv] inside write after init_done is 0 
+# UVM_INFO axi_s_driver_1.sv(52) @ 425: uvm_test_top.envr.sl_agnt.s_drv [uvm_test_top.envr.sl_agnt.s_drv] inside write after init_done is 0 
+# UVM_INFO axi_s_driver_1.sv(52) @ 435: uvm_test_top.envr.sl_agnt.s_drv [uvm_test_top.envr.sl_agnt.s_drv] inside write after init_done is 0 
+# UVM_INFO axi_s_driver_1.sv(52) @ 445: uvm_test_top.envr.sl_agnt.s_drv [uvm_test_top.envr.sl_agnt.s_drv] inside write after init_done is 0 
+#                  451ns : Load Mode Register 0x032
+#                  451ns : mode: CAS Latency=0x3, Burst Length=0x4
+# UVM_INFO axi_s_driver_1.sv(52) @ 455: uvm_test_top.envr.sl_agnt.s_drv [uvm_test_top.envr.sl_agnt.s_drv] inside write after init_done is 0 
+# UVM_INFO axi_s_driver_1.sv(52) @ 465: uvm_test_top.envr.sl_agnt.s_drv [uvm_test_top.envr.sl_agnt.s_drv] inside write after init_done is 0 
+# UVM_INFO axi_s_driver_1.sv(52) @ 475: uvm_test_top.envr.sl_agnt.s_drv [uvm_test_top.envr.sl_agnt.s_drv] inside write after init_done is 0 
+# UVM_INFO axi_s_driver_1.sv(52) @ 485: uvm_test_top.envr.sl_agnt.s_drv [uvm_test_top.envr.sl_agnt.s_drv] inside write after init_done is 0 
+# UVM_INFO axi_s_driver_1.sv(56) @ 495: uvm_test_top.envr.sl_agnt.s_drv [uvm_test_top.envr.sl_agnt.s_drv] inside write after init_done is 1 
+# UVM_INFO axi_m_driver.sv(140) @ 515: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] entering master write data channel
+# UVM_INFO axi_m_driver.sv(148) @ 515: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] waiting for wready : 0  to_ctr :  0
+# UVM_INFO axi_m_monitor.sv(41) @ 515: uvm_test_top.envr.agnt.mon [] -------------------------------------------------------------------------------------------
+# UVM_INFO axi_m_monitor.sv(42) @ 515: uvm_test_top.envr.agnt.mon [uvm_test_top.envr.agnt.mon] Write captured: Addr = 8, Data = abd5
+# UVM_INFO sdram_cntrl_driver.sv(40) @ 515: uvm_test_top.envr.s_agnt.sdram_drv [uvm_test_top.envr.s_agnt.sdram_drv] SDRAM_Driver_packet inside write implementation
+# UVM_INFO scb.sv(171) @ 515: uvm_test_top.envr.scb [scoreboard] ---------------- POPPED DATA ----------------
+# AXI Write Addr  : 8
+# AXI Read Addr   : 8
+# AXI Write Data  : abd5
+# AXI Read Data   : abd5
+# SDRAM Read Addr : 8
+# SDRAM Write Addr: 8
+# SDRAM Write Data: abd5
+# SDRAM Read Data : abd5
+# UVM_INFO scb.sv(180) @ 515: uvm_test_top.envr.scb [scoreboard] --------------------------------------------
+# UVM_INFO scb.sv(184) @ 515: uvm_test_top.envr.scb [scoreboard] Write Address Match!
+# UVM_INFO scb.sv(186) @ 515: uvm_test_top.envr.scb [scoreboard] Read Address Match!
+# UVM_INFO scb.sv(188) @ 515: uvm_test_top.envr.scb [scoreboard] Write Data Match!
+# UVM_INFO scb.sv(191) @ 515: uvm_test_top.envr.scb [scoreboard] ------------------------- DATA           1 MATCHED SUCCESSFULLY!!! ------------------------------
+# UVM_INFO sdram_cntrl_monitor.sv(40) @ 521: uvm_test_top.envr.s_agnt.mon [] -----------------------------------------------------------------------------------------------------------------
+# UVM_INFO sdram_cntrl_monitor.sv(41) @ 521: uvm_test_top.envr.s_agnt.mon [] write captured in sdram_monitor : ADDR = x , Data = x 
+# UVM_INFO axi_m_driver.sv(148) @ 525: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] waiting for wready : 0  to_ctr :  1
+# UVM_INFO axi_m_driver.sv(157) @ 535: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] data sent from master is : abd5
+# UVM_INFO axi_m_driver.sv(169) @ 545: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] entering master write response channel 
+# UVM_INFO axi_m_driver.sv(57) @ 565: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] exiting master driver run phase forever loop
+# UVM_INFO axi_m_driver.sv(53) @ 565: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] entering master driver run phase forever loop
+#                  571ns : Activate Command
+#                  571ns : Activate Command
+#                  591ns : Write Command
+#                  591ns :write: Bank=0x0, Row=0x000, Column=0x020, Data=0x5
+#                  611ns :write: Bank=0x0, Row=0x000, Column=0x021, Data=0xd
+#                  631ns :write: Bank=0x0, Row=0x000, Column=0x022, Data=0xb
+#                  651ns :write: Bank=0x0, Row=0x000, Column=0x023, Data=0xa
+# UVM_INFO sdram_cntrl_driver.sv(49) @ 701: uvm_test_top.envr.s_agnt.sdram_drv [uvm_test_top.envr.s_agnt.sdram_drv] Received transaction: ---------------------------------------------
+# Name          Type          Size  Value      
+# ---------------------------------------------
+# txn           axi_m_txn     -     @1093      
+#   aw_addr     integral      32    'h8        
+#   wdata       integral      16    'habd5     
+#   ar_addr     integral      32    'h0xxxxxxxx
+#   rdata       integral      16    'h0xxxx    
+#   type_trans  axi_txn_enum  32    WRITE_v    
+#   cycles      integral      32    'h0        
+#   sel         integral      1     'h0        
+# ---------------------------------------------
+# 
+# UVM_INFO sdram_cntrl_monitor.sv(57) @ 701: uvm_test_top.envr.s_agnt.mon [] ------------------------------------------------------------------------------------------------------------------
+# UVM_INFO sdram_cntrl_monitor.sv(58) @ 701: uvm_test_top.envr.s_agnt.mon [] Read captured in sdram_monitor : ADDR = x , Data = x 
+# UVM_INFO axi_m_driver.sv(112) @ 865: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] In master read adress channel
+# UVM_INFO sdram_cntrl_driver.sv(40) @ 865: uvm_test_top.envr.s_agnt.sdram_drv [uvm_test_top.envr.s_agnt.sdram_drv] SDRAM_Driver_packet inside write implementation
+# UVM_INFO sdram_cntrl_driver.sv(55) @ 865: uvm_test_top.envr.s_agnt.sdram_drv [uvm_test_top.envr.s_agnt.sdram_drv] inside read transaction of sdram _ controller driver 
+# siva arvalid recieved
+#  entered loop in driver 
+#                  931ns : Activate Command
+#                  931ns : Activate Command
+#                  951ns : Read Command
+#                  996ns : read: Bank=0x0, Row=0x000, Column=0x020, Data=0x5
+# temp value is 5
+#                 1016ns : read: Bank=0x0, Row=0x000, Column=0x021, Data=0xd
+# temp value is d
+#                 1036ns : read: Bank=0x0, Row=0x000, Column=0x022, Data=0xb
+# temp value is b
+#                 1056ns : read: Bank=0x0, Row=0x000, Column=0x023, Data=0xa
+# temp value is a
+# recieved data in axi_slave driver is abd5
+# read task inside sdram control driver : abd5 
+# UVM_INFO sdram_cntrl_driver.sv(62) @ 1061: uvm_test_top.envr.s_agnt.sdram_drv [uvm_test_top.envr.s_agnt.sdram_drv] Received transaction: ---------------------------------------------
+# Name          Type          Size  Value      
+# ---------------------------------------------
+# axi_m_txn     axi_m_txn     -     @1110      
+#   aw_addr     integral      32    'h0xxxxxxxx
+#   wdata       integral      16    'h0xxxx    
+#   ar_addr     integral      32    'h0xxxxxxxx
+#   rdata       integral      16    'habd5     
+#   type_trans  axi_txn_enum  32    READ_v     
+#   cycles      integral      32    'h0        
+#   sel         integral      1     'h0        
+# ---------------------------------------------
+# 
+# siva rvalid recieved
+# UVM_INFO axi_m_monitor.sv(65) @ 1061: uvm_test_top.envr.agnt.mon [] -------------------------------------------------------------------------------------------
+# UVM_INFO axi_m_monitor.sv(66) @ 1061: uvm_test_top.envr.agnt.mon [uvm_test_top.envr.agnt.mon] Read captured: Addr = 8, Data = abd5 (Match)
+# UVM_INFO axi_m_driver.sv(57) @ 1065: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] exiting master driver run phase forever loop
+# UVM_INFO axi_m_driver.sv(53) @ 1065: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] entering master driver run phase forever loop
+# exited loop
+# entered loop
+# UVM_INFO axi_m_driver.sv(81) @ 1565: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] entering master write adress channel is 10
+# UVM_INFO axi_s_driver_1.sv(56) @ 1575: uvm_test_top.envr.sl_agnt.s_drv [uvm_test_top.envr.sl_agnt.s_drv] inside write after init_done is 1 
+# UVM_INFO axi_m_driver.sv(140) @ 1595: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] entering master write data channel
+# UVM_INFO axi_m_driver.sv(148) @ 1595: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] waiting for wready : 0  to_ctr :  0
+# UVM_INFO axi_m_monitor.sv(41) @ 1595: uvm_test_top.envr.agnt.mon [] -------------------------------------------------------------------------------------------
+# UVM_INFO axi_m_monitor.sv(42) @ 1595: uvm_test_top.envr.agnt.mon [uvm_test_top.envr.agnt.mon] Write captured: Addr = 10, Data = abdd
+# UVM_INFO sdram_cntrl_driver.sv(40) @ 1595: uvm_test_top.envr.s_agnt.sdram_drv [uvm_test_top.envr.s_agnt.sdram_drv] SDRAM_Driver_packet inside write implementation
+# UVM_INFO scb.sv(171) @ 1595: uvm_test_top.envr.scb [scoreboard] ---------------- POPPED DATA ----------------
+# AXI Write Addr  : 10
+# AXI Read Addr   : 10
+# AXI Write Data  : abdd
+# AXI Read Data   : abdd
+# SDRAM Read Addr : 10
+# SDRAM Write Addr: 10
+# SDRAM Write Data: abdd
+# SDRAM Read Data : abdd
+# UVM_INFO scb.sv(180) @ 1595: uvm_test_top.envr.scb [scoreboard] --------------------------------------------
+# UVM_INFO scb.sv(184) @ 1595: uvm_test_top.envr.scb [scoreboard] Write Address Match!
+# UVM_INFO scb.sv(186) @ 1595: uvm_test_top.envr.scb [scoreboard] Read Address Match!
+# UVM_INFO scb.sv(188) @ 1595: uvm_test_top.envr.scb [scoreboard] Write Data Match!
+# UVM_INFO scb.sv(191) @ 1595: uvm_test_top.envr.scb [scoreboard] ------------------------- DATA           2 MATCHED SUCCESSFULLY!!! ------------------------------
+# UVM_INFO sdram_cntrl_monitor.sv(40) @ 1601: uvm_test_top.envr.s_agnt.mon [] -----------------------------------------------------------------------------------------------------------------
+# UVM_INFO sdram_cntrl_monitor.sv(41) @ 1601: uvm_test_top.envr.s_agnt.mon [] write captured in sdram_monitor : ADDR = 10 , Data = abd5 
+# UVM_INFO axi_m_driver.sv(148) @ 1605: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] waiting for wready : 0  to_ctr :  1
+# UVM_INFO axi_m_driver.sv(157) @ 1615: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] data sent from master is : abdd
+# UVM_INFO axi_m_driver.sv(169) @ 1625: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] entering master write response channel 
+# UVM_INFO axi_m_driver.sv(57) @ 1645: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] exiting master driver run phase forever loop
+# UVM_INFO axi_m_driver.sv(53) @ 1645: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] entering master driver run phase forever loop
+#                 1651ns : Activate Command
+#                 1651ns : Activate Command
+#                 1671ns : Write Command
+#                 1671ns :write: Bank=0x0, Row=0x000, Column=0x040, Data=0xd
+#                 1691ns :write: Bank=0x0, Row=0x000, Column=0x041, Data=0xd
+#                 1711ns :write: Bank=0x0, Row=0x000, Column=0x042, Data=0xb
+#                 1731ns :write: Bank=0x0, Row=0x000, Column=0x043, Data=0xa
+# UVM_INFO sdram_cntrl_driver.sv(49) @ 1781: uvm_test_top.envr.s_agnt.sdram_drv [uvm_test_top.envr.s_agnt.sdram_drv] Received transaction: ---------------------------------------------
+# Name          Type          Size  Value      
+# ---------------------------------------------
+# txn           axi_m_txn     -     @1118      
+#   aw_addr     integral      32    'h10       
+#   wdata       integral      16    'habdd     
+#   ar_addr     integral      32    'h0xxxxxxxx
+#   rdata       integral      16    'h0xxxx    
+#   type_trans  axi_txn_enum  32    WRITE_v    
+#   cycles      integral      32    'h0        
+#   sel         integral      1     'h0        
+# ---------------------------------------------
+# 
+# UVM_INFO sdram_cntrl_monitor.sv(57) @ 1781: uvm_test_top.envr.s_agnt.mon [] ------------------------------------------------------------------------------------------------------------------
+# UVM_INFO sdram_cntrl_monitor.sv(58) @ 1781: uvm_test_top.envr.s_agnt.mon [] Read captured in sdram_monitor : ADDR = 10 , Data = abdd 
+# UVM_INFO axi_m_driver.sv(112) @ 1945: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] In master read adress channel
+# UVM_INFO sdram_cntrl_driver.sv(40) @ 1945: uvm_test_top.envr.s_agnt.sdram_drv [uvm_test_top.envr.s_agnt.sdram_drv] SDRAM_Driver_packet inside write implementation
+# UVM_INFO sdram_cntrl_driver.sv(55) @ 1945: uvm_test_top.envr.s_agnt.sdram_drv [uvm_test_top.envr.s_agnt.sdram_drv] inside read transaction of sdram _ controller driver 
+# siva arvalid recieved
+#  entered loop in driver 
+#                 2011ns : Activate Command
+#                 2011ns : Activate Command
+#                 2031ns : Read Command
+#                 2076ns : read: Bank=0x0, Row=0x000, Column=0x040, Data=0xd
+# temp value is d
+#                 2096ns : read: Bank=0x0, Row=0x000, Column=0x041, Data=0xd
+# temp value is d
+#                 2116ns : read: Bank=0x0, Row=0x000, Column=0x042, Data=0xb
+# temp value is b
+#                 2136ns : read: Bank=0x0, Row=0x000, Column=0x043, Data=0xa
+# temp value is a
+# recieved data in axi_slave driver is abdd
+# read task inside sdram control driver : abdd 
+# UVM_INFO sdram_cntrl_driver.sv(62) @ 2141: uvm_test_top.envr.s_agnt.sdram_drv [uvm_test_top.envr.s_agnt.sdram_drv] Received transaction: ---------------------------------------------
+# Name          Type          Size  Value      
+# ---------------------------------------------
+# axi_m_txn     axi_m_txn     -     @1134      
+#   aw_addr     integral      32    'h0xxxxxxxx
+#   wdata       integral      16    'h0xxxx    
+#   ar_addr     integral      32    'h0xxxxxxxx
+#   rdata       integral      16    'habdd     
+#   type_trans  axi_txn_enum  32    READ_v     
+#   cycles      integral      32    'h0        
+#   sel         integral      1     'h0        
+# ---------------------------------------------
+# 
+# siva rvalid recieved
+# UVM_INFO axi_m_monitor.sv(65) @ 2141: uvm_test_top.envr.agnt.mon [] -------------------------------------------------------------------------------------------
+# UVM_INFO axi_m_monitor.sv(66) @ 2141: uvm_test_top.envr.agnt.mon [uvm_test_top.envr.agnt.mon] Read captured: Addr = 10, Data = abdd (Match)
+# UVM_INFO axi_m_driver.sv(57) @ 2145: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] exiting master driver run phase forever loop
+# UVM_INFO axi_m_driver.sv(53) @ 2145: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] entering master driver run phase forever loop
+# exited loop
+# entered loop
+# UVM_INFO axi_m_driver.sv(81) @ 2645: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] entering master write adress channel is 18
+# UVM_INFO axi_s_driver_1.sv(56) @ 2655: uvm_test_top.envr.sl_agnt.s_drv [uvm_test_top.envr.sl_agnt.s_drv] inside write after init_done is 1 
+# UVM_INFO axi_m_driver.sv(140) @ 2675: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] entering master write data channel
+# UVM_INFO axi_m_driver.sv(148) @ 2675: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] waiting for wready : 0  to_ctr :  0
+# UVM_INFO axi_m_monitor.sv(41) @ 2675: uvm_test_top.envr.agnt.mon [] -------------------------------------------------------------------------------------------
+# UVM_INFO axi_m_monitor.sv(42) @ 2675: uvm_test_top.envr.agnt.mon [uvm_test_top.envr.agnt.mon] Write captured: Addr = 18, Data = abe5
+# UVM_INFO sdram_cntrl_driver.sv(40) @ 2675: uvm_test_top.envr.s_agnt.sdram_drv [uvm_test_top.envr.s_agnt.sdram_drv] SDRAM_Driver_packet inside write implementation
+# UVM_INFO scb.sv(171) @ 2675: uvm_test_top.envr.scb [scoreboard] ---------------- POPPED DATA ----------------
+# AXI Write Addr  : 18
+# AXI Read Addr   : 18
+# AXI Write Data  : abe5
+# AXI Read Data   : abe5
+# SDRAM Read Addr : 18
+# SDRAM Write Addr: 18
+# SDRAM Write Data: abe5
+# SDRAM Read Data : abe5
+# UVM_INFO scb.sv(180) @ 2675: uvm_test_top.envr.scb [scoreboard] --------------------------------------------
+# UVM_INFO scb.sv(184) @ 2675: uvm_test_top.envr.scb [scoreboard] Write Address Match!
+# UVM_INFO scb.sv(186) @ 2675: uvm_test_top.envr.scb [scoreboard] Read Address Match!
+# UVM_INFO scb.sv(188) @ 2675: uvm_test_top.envr.scb [scoreboard] Write Data Match!
+# UVM_INFO scb.sv(191) @ 2675: uvm_test_top.envr.scb [scoreboard] ------------------------- DATA           3 MATCHED SUCCESSFULLY!!! ------------------------------
+# UVM_INFO sdram_cntrl_monitor.sv(40) @ 2681: uvm_test_top.envr.s_agnt.mon [] -----------------------------------------------------------------------------------------------------------------
+# UVM_INFO sdram_cntrl_monitor.sv(41) @ 2681: uvm_test_top.envr.s_agnt.mon [] write captured in sdram_monitor : ADDR = 18 , Data = abdd 
+# UVM_INFO axi_m_driver.sv(148) @ 2685: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] waiting for wready : 0  to_ctr :  1
+# UVM_INFO axi_m_driver.sv(157) @ 2695: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] data sent from master is : abe5
+# UVM_INFO axi_m_driver.sv(169) @ 2705: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] entering master write response channel 
+# UVM_INFO axi_m_driver.sv(57) @ 2725: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] exiting master driver run phase forever loop
+# UVM_INFO axi_m_driver.sv(53) @ 2725: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] entering master driver run phase forever loop
+#                 2731ns : Activate Command
+#                 2731ns : Activate Command
+#                 2751ns : Write Command
+#                 2751ns :write: Bank=0x0, Row=0x000, Column=0x060, Data=0x5
+#                 2771ns :write: Bank=0x0, Row=0x000, Column=0x061, Data=0xe
+#                 2791ns :write: Bank=0x0, Row=0x000, Column=0x062, Data=0xb
+#                 2811ns :write: Bank=0x0, Row=0x000, Column=0x063, Data=0xa
+# UVM_INFO sdram_cntrl_driver.sv(49) @ 2861: uvm_test_top.envr.s_agnt.sdram_drv [uvm_test_top.envr.s_agnt.sdram_drv] Received transaction: ---------------------------------------------
+# Name          Type          Size  Value      
+# ---------------------------------------------
+# txn           axi_m_txn     -     @1142      
+#   aw_addr     integral      32    'h18       
+#   wdata       integral      16    'habe5     
+#   ar_addr     integral      32    'h0xxxxxxxx
+#   rdata       integral      16    'h0xxxx    
+#   type_trans  axi_txn_enum  32    WRITE_v    
+#   cycles      integral      32    'h0        
+#   sel         integral      1     'h0        
+# ---------------------------------------------
+# 
+# UVM_INFO sdram_cntrl_monitor.sv(57) @ 2861: uvm_test_top.envr.s_agnt.mon [] ------------------------------------------------------------------------------------------------------------------
+# UVM_INFO sdram_cntrl_monitor.sv(58) @ 2861: uvm_test_top.envr.s_agnt.mon [] Read captured in sdram_monitor : ADDR = 18 , Data = abe5 
+# UVM_INFO axi_m_driver.sv(112) @ 3025: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] In master read adress channel
+# UVM_INFO sdram_cntrl_driver.sv(40) @ 3025: uvm_test_top.envr.s_agnt.sdram_drv [uvm_test_top.envr.s_agnt.sdram_drv] SDRAM_Driver_packet inside write implementation
+# UVM_INFO sdram_cntrl_driver.sv(55) @ 3025: uvm_test_top.envr.s_agnt.sdram_drv [uvm_test_top.envr.s_agnt.sdram_drv] inside read transaction of sdram _ controller driver 
+# siva arvalid recieved
+#  entered loop in driver 
+#                 3091ns : Activate Command
+#                 3091ns : Activate Command
+#                 3111ns : Read Command
+#                 3156ns : read: Bank=0x0, Row=0x000, Column=0x060, Data=0x5
+# temp value is 5
+#                 3176ns : read: Bank=0x0, Row=0x000, Column=0x061, Data=0xe
+# temp value is e
+#                 3196ns : read: Bank=0x0, Row=0x000, Column=0x062, Data=0xb
+# temp value is b
+#                 3216ns : read: Bank=0x0, Row=0x000, Column=0x063, Data=0xa
+# temp value is a
+# recieved data in axi_slave driver is abe5
+# read task inside sdram control driver : abe5 
+# UVM_INFO sdram_cntrl_driver.sv(62) @ 3221: uvm_test_top.envr.s_agnt.sdram_drv [uvm_test_top.envr.s_agnt.sdram_drv] Received transaction: ---------------------------------------------
+# Name          Type          Size  Value      
+# ---------------------------------------------
+# axi_m_txn     axi_m_txn     -     @1158      
+#   aw_addr     integral      32    'h0xxxxxxxx
+#   wdata       integral      16    'h0xxxx    
+#   ar_addr     integral      32    'h0xxxxxxxx
+#   rdata       integral      16    'habe5     
+#   type_trans  axi_txn_enum  32    READ_v     
+#   cycles      integral      32    'h0        
+#   sel         integral      1     'h0        
+# ---------------------------------------------
+# 
+# siva rvalid recieved
+# UVM_INFO axi_m_monitor.sv(65) @ 3221: uvm_test_top.envr.agnt.mon [] -------------------------------------------------------------------------------------------
+# UVM_INFO axi_m_monitor.sv(66) @ 3221: uvm_test_top.envr.agnt.mon [uvm_test_top.envr.agnt.mon] Read captured: Addr = 18, Data = abe5 (Match)
+# UVM_INFO axi_m_driver.sv(57) @ 3225: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] exiting master driver run phase forever loop
+# UVM_INFO axi_m_driver.sv(53) @ 3225: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] entering master driver run phase forever loop
+# exited loop
+# entered loop
+# UVM_INFO axi_m_driver.sv(81) @ 3725: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] entering master write adress channel is 20
+# UVM_INFO axi_s_driver_1.sv(56) @ 3735: uvm_test_top.envr.sl_agnt.s_drv [uvm_test_top.envr.sl_agnt.s_drv] inside write after init_done is 1 
+# UVM_INFO axi_m_driver.sv(140) @ 3755: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] entering master write data channel
+# UVM_INFO axi_m_driver.sv(148) @ 3755: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] waiting for wready : 0  to_ctr :  0
+# UVM_INFO axi_m_monitor.sv(41) @ 3755: uvm_test_top.envr.agnt.mon [] -------------------------------------------------------------------------------------------
+# UVM_INFO axi_m_monitor.sv(42) @ 3755: uvm_test_top.envr.agnt.mon [uvm_test_top.envr.agnt.mon] Write captured: Addr = 20, Data = abed
+# UVM_INFO sdram_cntrl_driver.sv(40) @ 3755: uvm_test_top.envr.s_agnt.sdram_drv [uvm_test_top.envr.s_agnt.sdram_drv] SDRAM_Driver_packet inside write implementation
+# UVM_INFO scb.sv(171) @ 3755: uvm_test_top.envr.scb [scoreboard] ---------------- POPPED DATA ----------------
+# AXI Write Addr  : 20
+# AXI Read Addr   : 20
+# AXI Write Data  : abed
+# AXI Read Data   : abed
+# SDRAM Read Addr : 20
+# SDRAM Write Addr: 20
+# SDRAM Write Data: abed
+# SDRAM Read Data : abed
+# UVM_INFO scb.sv(180) @ 3755: uvm_test_top.envr.scb [scoreboard] --------------------------------------------
+# UVM_INFO scb.sv(184) @ 3755: uvm_test_top.envr.scb [scoreboard] Write Address Match!
+# UVM_INFO scb.sv(186) @ 3755: uvm_test_top.envr.scb [scoreboard] Read Address Match!
+# UVM_INFO scb.sv(188) @ 3755: uvm_test_top.envr.scb [scoreboard] Write Data Match!
+# UVM_INFO scb.sv(191) @ 3755: uvm_test_top.envr.scb [scoreboard] ------------------------- DATA           4 MATCHED SUCCESSFULLY!!! ------------------------------
+# UVM_INFO sdram_cntrl_monitor.sv(40) @ 3761: uvm_test_top.envr.s_agnt.mon [] -----------------------------------------------------------------------------------------------------------------
+# UVM_INFO sdram_cntrl_monitor.sv(41) @ 3761: uvm_test_top.envr.s_agnt.mon [] write captured in sdram_monitor : ADDR = 20 , Data = abe5 
+# UVM_INFO axi_m_driver.sv(148) @ 3765: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] waiting for wready : 0  to_ctr :  1
+# UVM_INFO axi_m_driver.sv(157) @ 3775: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] data sent from master is : abed
+# UVM_INFO axi_m_driver.sv(169) @ 3785: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] entering master write response channel 
+# UVM_INFO axi_m_driver.sv(57) @ 3805: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] exiting master driver run phase forever loop
+# UVM_INFO axi_m_driver.sv(53) @ 3805: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] entering master driver run phase forever loop
+#                 3811ns : Activate Command
+#                 3811ns : Activate Command
+#                 3831ns : Write Command
+#                 3831ns :write: Bank=0x0, Row=0x000, Column=0x080, Data=0xd
+#                 3851ns :write: Bank=0x0, Row=0x000, Column=0x081, Data=0xe
+#                 3871ns :write: Bank=0x0, Row=0x000, Column=0x082, Data=0xb
+#                 3891ns :write: Bank=0x0, Row=0x000, Column=0x083, Data=0xa
+# UVM_INFO sdram_cntrl_driver.sv(49) @ 3941: uvm_test_top.envr.s_agnt.sdram_drv [uvm_test_top.envr.s_agnt.sdram_drv] Received transaction: ---------------------------------------------
+# Name          Type          Size  Value      
+# ---------------------------------------------
+# txn           axi_m_txn     -     @1166      
+#   aw_addr     integral      32    'h20       
+#   wdata       integral      16    'habed     
+#   ar_addr     integral      32    'h0xxxxxxxx
+#   rdata       integral      16    'h0xxxx    
+#   type_trans  axi_txn_enum  32    WRITE_v    
+#   cycles      integral      32    'h0        
+#   sel         integral      1     'h0        
+# ---------------------------------------------
+# 
+# UVM_INFO sdram_cntrl_monitor.sv(57) @ 3941: uvm_test_top.envr.s_agnt.mon [] ------------------------------------------------------------------------------------------------------------------
+# UVM_INFO sdram_cntrl_monitor.sv(58) @ 3941: uvm_test_top.envr.s_agnt.mon [] Read captured in sdram_monitor : ADDR = 20 , Data = abed 
+# UVM_INFO axi_m_driver.sv(112) @ 4105: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] In master read adress channel
+# UVM_INFO sdram_cntrl_driver.sv(40) @ 4105: uvm_test_top.envr.s_agnt.sdram_drv [uvm_test_top.envr.s_agnt.sdram_drv] SDRAM_Driver_packet inside write implementation
+# UVM_INFO sdram_cntrl_driver.sv(55) @ 4105: uvm_test_top.envr.s_agnt.sdram_drv [uvm_test_top.envr.s_agnt.sdram_drv] inside read transaction of sdram _ controller driver 
+# siva arvalid recieved
+#  entered loop in driver 
+#                 4171ns : Activate Command
+#                 4171ns : Activate Command
+#                 4191ns : Read Command
+#                 4236ns : read: Bank=0x0, Row=0x000, Column=0x080, Data=0xd
+# temp value is d
+#                 4256ns : read: Bank=0x0, Row=0x000, Column=0x081, Data=0xe
+# temp value is e
+#                 4276ns : read: Bank=0x0, Row=0x000, Column=0x082, Data=0xb
+# temp value is b
+#                 4296ns : read: Bank=0x0, Row=0x000, Column=0x083, Data=0xa
+# temp value is a
+# recieved data in axi_slave driver is abed
+# read task inside sdram control driver : abed 
+# UVM_INFO sdram_cntrl_driver.sv(62) @ 4301: uvm_test_top.envr.s_agnt.sdram_drv [uvm_test_top.envr.s_agnt.sdram_drv] Received transaction: ---------------------------------------------
+# Name          Type          Size  Value      
+# ---------------------------------------------
+# axi_m_txn     axi_m_txn     -     @1182      
+#   aw_addr     integral      32    'h0xxxxxxxx
+#   wdata       integral      16    'h0xxxx    
+#   ar_addr     integral      32    'h0xxxxxxxx
+#   rdata       integral      16    'habed     
+#   type_trans  axi_txn_enum  32    READ_v     
+#   cycles      integral      32    'h0        
+#   sel         integral      1     'h0        
+# ---------------------------------------------
+# 
+# siva rvalid recieved
+# UVM_INFO axi_m_monitor.sv(65) @ 4301: uvm_test_top.envr.agnt.mon [] -------------------------------------------------------------------------------------------
+# UVM_INFO axi_m_monitor.sv(66) @ 4301: uvm_test_top.envr.agnt.mon [uvm_test_top.envr.agnt.mon] Read captured: Addr = 20, Data = abed (Match)
+# UVM_INFO axi_m_driver.sv(57) @ 4305: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] exiting master driver run phase forever loop
+# UVM_INFO axi_m_driver.sv(53) @ 4305: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] entering master driver run phase forever loop
+# exited loop
+# entered loop
+# UVM_INFO axi_m_driver.sv(81) @ 4805: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] entering master write adress channel is 28
+# UVM_INFO axi_s_driver_1.sv(56) @ 4815: uvm_test_top.envr.sl_agnt.s_drv [uvm_test_top.envr.sl_agnt.s_drv] inside write after init_done is 1 
+# UVM_INFO axi_m_driver.sv(140) @ 4835: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] entering master write data channel
+# UVM_INFO axi_m_driver.sv(148) @ 4835: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] waiting for wready : 0  to_ctr :  0
+# UVM_INFO axi_m_monitor.sv(41) @ 4835: uvm_test_top.envr.agnt.mon [] -------------------------------------------------------------------------------------------
+# UVM_INFO axi_m_monitor.sv(42) @ 4835: uvm_test_top.envr.agnt.mon [uvm_test_top.envr.agnt.mon] Write captured: Addr = 28, Data = abf5
+# UVM_INFO sdram_cntrl_driver.sv(40) @ 4835: uvm_test_top.envr.s_agnt.sdram_drv [uvm_test_top.envr.s_agnt.sdram_drv] SDRAM_Driver_packet inside write implementation
+# UVM_INFO scb.sv(171) @ 4835: uvm_test_top.envr.scb [scoreboard] ---------------- POPPED DATA ----------------
+# AXI Write Addr  : 28
+# AXI Read Addr   : 28
+# AXI Write Data  : abf5
+# AXI Read Data   : abf5
+# SDRAM Read Addr : 28
+# SDRAM Write Addr: 28
+# SDRAM Write Data: abf5
+# SDRAM Read Data : abf5
+# UVM_INFO scb.sv(180) @ 4835: uvm_test_top.envr.scb [scoreboard] --------------------------------------------
+# UVM_INFO scb.sv(184) @ 4835: uvm_test_top.envr.scb [scoreboard] Write Address Match!
+# UVM_INFO scb.sv(186) @ 4835: uvm_test_top.envr.scb [scoreboard] Read Address Match!
+# UVM_INFO scb.sv(188) @ 4835: uvm_test_top.envr.scb [scoreboard] Write Data Match!
+# UVM_INFO scb.sv(191) @ 4835: uvm_test_top.envr.scb [scoreboard] ------------------------- DATA           5 MATCHED SUCCESSFULLY!!! ------------------------------
+# UVM_INFO sdram_cntrl_monitor.sv(40) @ 4841: uvm_test_top.envr.s_agnt.mon [] -----------------------------------------------------------------------------------------------------------------
+# UVM_INFO sdram_cntrl_monitor.sv(41) @ 4841: uvm_test_top.envr.s_agnt.mon [] write captured in sdram_monitor : ADDR = 28 , Data = abed 
+# UVM_INFO axi_m_driver.sv(148) @ 4845: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] waiting for wready : 0  to_ctr :  1
+# UVM_INFO axi_m_driver.sv(157) @ 4855: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] data sent from master is : abf5
+# UVM_INFO axi_m_driver.sv(169) @ 4865: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] entering master write response channel 
+# UVM_INFO axi_m_driver.sv(57) @ 4885: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] exiting master driver run phase forever loop
+# UVM_INFO axi_m_driver.sv(53) @ 4885: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] entering master driver run phase forever loop
+#                 4891ns : Activate Command
+#                 4891ns : Activate Command
+#                 4911ns : Write Command
+#                 4911ns :write: Bank=0x0, Row=0x000, Column=0x0a0, Data=0x5
+#                 4931ns :write: Bank=0x0, Row=0x000, Column=0x0a1, Data=0xf
+#                 4951ns :write: Bank=0x0, Row=0x000, Column=0x0a2, Data=0xb
+#                 4971ns :write: Bank=0x0, Row=0x000, Column=0x0a3, Data=0xa
+# UVM_INFO sdram_cntrl_driver.sv(49) @ 5021: uvm_test_top.envr.s_agnt.sdram_drv [uvm_test_top.envr.s_agnt.sdram_drv] Received transaction: ---------------------------------------------
+# Name          Type          Size  Value      
+# ---------------------------------------------
+# txn           axi_m_txn     -     @1190      
+#   aw_addr     integral      32    'h28       
+#   wdata       integral      16    'habf5     
+#   ar_addr     integral      32    'h0xxxxxxxx
+#   rdata       integral      16    'h0xxxx    
+#   type_trans  axi_txn_enum  32    WRITE_v    
+#   cycles      integral      32    'h0        
+#   sel         integral      1     'h0        
+# ---------------------------------------------
+# 
+# UVM_INFO sdram_cntrl_monitor.sv(57) @ 5021: uvm_test_top.envr.s_agnt.mon [] ------------------------------------------------------------------------------------------------------------------
+# UVM_INFO sdram_cntrl_monitor.sv(58) @ 5021: uvm_test_top.envr.s_agnt.mon [] Read captured in sdram_monitor : ADDR = 28 , Data = abf5 
+# UVM_INFO axi_m_driver.sv(112) @ 5185: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] In master read adress channel
+# UVM_INFO sdram_cntrl_driver.sv(40) @ 5185: uvm_test_top.envr.s_agnt.sdram_drv [uvm_test_top.envr.s_agnt.sdram_drv] SDRAM_Driver_packet inside write implementation
+# UVM_INFO sdram_cntrl_driver.sv(55) @ 5185: uvm_test_top.envr.s_agnt.sdram_drv [uvm_test_top.envr.s_agnt.sdram_drv] inside read transaction of sdram _ controller driver 
+# siva arvalid recieved
+#  entered loop in driver 
+#                 5251ns : Activate Command
+#                 5251ns : Activate Command
+#                 5271ns : Read Command
+#                 5316ns : read: Bank=0x0, Row=0x000, Column=0x0a0, Data=0x5
+# temp value is 5
+#                 5336ns : read: Bank=0x0, Row=0x000, Column=0x0a1, Data=0xf
+# temp value is f
+#                 5356ns : read: Bank=0x0, Row=0x000, Column=0x0a2, Data=0xb
+# temp value is b
+#                 5376ns : read: Bank=0x0, Row=0x000, Column=0x0a3, Data=0xa
+# temp value is a
+# recieved data in axi_slave driver is abf5
+# read task inside sdram control driver : abf5 
+# UVM_INFO sdram_cntrl_driver.sv(62) @ 5381: uvm_test_top.envr.s_agnt.sdram_drv [uvm_test_top.envr.s_agnt.sdram_drv] Received transaction: ---------------------------------------------
+# Name          Type          Size  Value      
+# ---------------------------------------------
+# axi_m_txn     axi_m_txn     -     @1206      
+#   aw_addr     integral      32    'h0xxxxxxxx
+#   wdata       integral      16    'h0xxxx    
+#   ar_addr     integral      32    'h0xxxxxxxx
+#   rdata       integral      16    'habf5     
+#   type_trans  axi_txn_enum  32    READ_v     
+#   cycles      integral      32    'h0        
+#   sel         integral      1     'h0        
+# ---------------------------------------------
+# 
+# siva rvalid recieved
+# UVM_INFO axi_m_monitor.sv(65) @ 5381: uvm_test_top.envr.agnt.mon [] -------------------------------------------------------------------------------------------
+# UVM_INFO axi_m_monitor.sv(66) @ 5381: uvm_test_top.envr.agnt.mon [uvm_test_top.envr.agnt.mon] Read captured: Addr = 28, Data = abf5 (Match)
+# UVM_INFO axi_m_driver.sv(57) @ 5385: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] exiting master driver run phase forever loop
+# UVM_INFO axi_m_driver.sv(53) @ 5385: uvm_test_top.envr.agnt.drv [uvm_test_top.envr.agnt.drv] entering master driver run phase forever loop
+# exited loop
+# ** Note: $finish    : sdram_top.sv(116)
+#    Time: 10300 ns  Iteration: 0  Instance: /top_tb
+# 1
+# Break at sdram_top.sv line 116
+# Break key hit
